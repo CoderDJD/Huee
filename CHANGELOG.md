@@ -7,7 +7,7 @@
 - Frontend change from VanillaJS to VueJS.
 - Backend to be written in typescript, GraphQL may be used.
 - Added ROADMAP.md.
-- Waiting for icon, to be made by [Animadior](https://twitter.com/animadior).
+- Waiting for icon, to be made by [@animadior](https://twitter.com/animadior).
 
 # 5/4/2021
 
@@ -15,3 +15,9 @@
 - Rough sketch for icon done.
 - Schema and types are clearly outlined in the server.
 - VueJS configured for use with TypeScript.
+
+# 7/4/2021
+
+- School 🥳 reopened for me, might ot have a lot of time to spend on this afterwards.
+- Should do a lot of work.
+- Wrote Vue Components.

@@ -4,17 +4,17 @@ export interface Hooter {
   user_name: string;
   display_name: string;
   birth_date: string;
-  join_date: String;
+  join_date: string;
   bio: string;
   profile_picture_uri: string;
   profile_banner_uri: string;
   location: string;
   // In app data.
-  hoots: Hoot[];
-  listeners: Noter[];
+  hoots: Listener[];
+  listeners: Listener[];
 }
 
-export interface Noter {
+export interface Listener {
   _id?: string;
   display_name: string;
   scketuser_name: string;
@@ -24,7 +24,7 @@ export interface Noter {
 
 export interface Hoot {
   _id?: string;
-  hooter: Noter;
+  hooter: Listener;
   hoot: string;
   created: any;
 }

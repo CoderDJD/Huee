@@ -1,5 +1,3 @@
-# Huée
-
 ## Project setup
 
 ```

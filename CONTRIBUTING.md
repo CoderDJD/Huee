@@ -2,16 +2,15 @@
 
 PLEASE READ CODE_OF_CONDUCT.md BEFORE GOING ANY FURTHER.
 
-Thanks for deciding to Huéetribute.
+Thanks for your thought to contribute.
 Pull requests / issues will be reviewed each day.
-
 **You** can contribute to this repository by any of the following means :
 
 - Becoming a Huéelistener(Maintainer).
 - [Creating an issue](https://docs.github.com/en/github/managing-your-work-on-github/creating-an-issue)
   - Proposing new features
 - [Creating a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request#creating-the-pull-request)
-- Submitting a fix, to an issue.
+  - Submitting a fix, to an issue.
 
 **Contributing Code** :
 
