@@ -1,6 +1,5 @@
 <p align="center">
-  <img align="center" src="./vue/src/assets/icon.png" width="128">
-  <h1 align="center">Huée</h1>
+  <img align="center" src="logo.png" width="216">
   <h3 align="center">A fast, unopinionated social media platform fitting the needs of the 21st century.</h3>
 </p>
 <br>
