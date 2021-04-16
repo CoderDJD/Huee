@@ -1,8 +1,7 @@
 <p align="center">
-  <img align="center" src="logo.png" width="216">
-  <h3 align="center">Hoot : Making projects take off.</h3>
+  <img src="logo.png" width="216">
+  <h3 align="center">Hoot : Making open source projects take off ☄️.</h3>
 </p>
-<br>
 <br>
 <h1>Code Of Conduct</h1>
 Please read <a href="https://github.com/CoderDJD/Hoot/blob/main/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a> before any activity in this repository.
