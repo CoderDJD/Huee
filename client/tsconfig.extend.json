@@ -3,6 +3,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"],
+      "@globaltypes": ["./../../types/*"],
       "@store": ["./store/*"],
       "@scss": ["./scss/*"],
       "@lib/*": ["./lib/*"]
