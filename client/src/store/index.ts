@@ -1,5 +1,5 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { User } from "../../types/user";
+import { User } from "../../../types/user";
 const usersReducer = createSlice({
   name: "user",
   initialState: {
@@ -12,7 +12,7 @@ const usersReducer = createSlice({
   }
 });
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     users: usersReducer.reducer
   }
