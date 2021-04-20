@@ -12,7 +12,7 @@ const usersReducer = createSlice({
   }
 });
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     users: usersReducer.reducer
   }
