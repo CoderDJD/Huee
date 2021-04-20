@@ -1,21 +1,21 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { User } from "../../../types/user";
-const usersReducer = createSlice({
-  name: "user",
+const rootSlice = createSlice({
+  name: "root",
   initialState: {
-    data: {} as User
+    currentUser: {} as User,
   },
   reducers: {
     UPDATE_CURRENT_USER(state, action: PayloadAction<User>) {
-      state.data = action.payload;
-    }
-  }
+      state.currentUser = action.payload;
+    },
+  },
 });
 
 export const store = configureStore({
   reducer: {
-    users: usersReducer.reducer
-  }
+    root: rootSlice.reducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
