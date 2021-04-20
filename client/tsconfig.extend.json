@@ -4,7 +4,7 @@
     "paths": {
       "@/*": ["./*"],
       "@globaltypes": ["./../../types/*"],
-      "@store": ["./store/*"],
+      "@store": ["./src/store/*"],
       "@scss": ["./scss/*"],
       "@lib/*": ["./lib/*"]
     }
