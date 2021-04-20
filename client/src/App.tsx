@@ -1,12 +1,12 @@
-import React from "react";
+import React, { lazy } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { getCurrentUser } from "./store/user/selector";
-const Auth = React.lazy(() => import("./modules/auth/Auth"));
-const Listings = React.lazy(() => import("./modules/main/Listings"));
+import RootSelectors from "./store/root/selector";
+const Auth = lazy(() => import("./modules/auth/Auth")),
+  Listings = lazy(() => import("./modules/main/general/listings/Listings"));
 
 function App() {
-  const user = useSelector(getCurrentUser);
+  const user = useSelector(RootSelectors.getCurrentUser);
   return (
     <div className="w-full h-full">
       <Router>

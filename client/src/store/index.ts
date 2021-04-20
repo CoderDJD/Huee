@@ -1,16 +1,6 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { User } from "../../../types/user";
-const rootSlice = createSlice({
-  name: "root",
-  initialState: {
-    currentUser: {} as User,
-  },
-  reducers: {
-    UPDATE_CURRENT_USER(state, action: PayloadAction<User>) {
-      state.currentUser = action.payload;
-    },
-  },
-});
+import rootSlice from "./root";
 
 export const store = configureStore({
   reducer: {
