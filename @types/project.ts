@@ -1,33 +1,28 @@
-import { User } from "./user";
-interface ProjectUserDetails extends User {
-  TeamPosition: String;
-  Contributions: Number;
-}
+import { UserDetails } from "./user";
 
 export interface ProjectTeam {
-  Name: String;
-  CDate: Date;
-  Participants: ProjectUserDetails[];
-  Img_uri: String;
+  name: string;
+  colour: string; // Any colour they like most likely a selection
+  created_date: string;
+  participants: UserDetails[];
+  img_uri: string;
 }
-
+export type SocialMedia = "facebook" | "twitter" | "twitch" | "discord";
 export interface Project {
-  description: String;
-  participants: ProjectUserDetails[];
-  cdate: String;
-  private: Boolean;
+  description: string;
+  created_date: string;
+  private: boolean;
   teams: ProjectTeam[];
-  github: String;
-  fb: String;
-  yt: String;
-  twitch: String;
-  tw: String;
-  roadmap: String;
-  completed: Boolean;
-  progress: Number;
-  pro_img_uri: String;
-  images: String[];
-  videos: String[];
-  prototype: String;
-  designs: String[];
+  social_links: Record<SocialMedia, string>;
+  roadmap: Record<string | "completed", string>[];
+  completed: boolean;
+  logo: string;
+  banner_image?: string;
+  owner_details: UserDetails;
+  images: string[];
+  name: string;
+  views: number;
+  videos: string[];
+  prototype_url: string; // Can be a URL or an image
+  designs: string[];
 }

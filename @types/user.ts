@@ -1,9 +1,11 @@
-export default interface User {
+export interface User {
   id: string;
   name: string;
   uname: string;
-  mail: string;
+  email: string;
   dob: string;
-  onl: boolean;
+  online: boolean;
   img_uri: string;
 }
+
+export type UserDetails = Pick<User, "email" | "uname" | "name" | "online">;
