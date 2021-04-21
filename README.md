@@ -14,11 +14,8 @@ Please read <a href="https://github.com/CoderDJD/Hoot/blob/main/CONTRIBUTING.md"
 <br>
 <h1>Maintainers</h1>
 - <a href="https://github.com/yomiAdenaike01">@yomiAdenaike01</a><br>
-Yomi Adenaike
 <br>
 - <a href="https://github.com/yomiAdenaike01">@CoderDJD</a><br>
-Joshua Daniel
-<br>
 <br>
 <h1>🥞 Used</h1>
 <h3>📱 🖥 💻 : React(tsx), React Native, Electron</h3>
