@@ -1,6 +1,6 @@
-import { Project, ProjectTeam } from "../../../types/project";
+import { Project, ProjectTeam } from "../../../@types/project";
 import faker from "faker";
-import { UserDetails } from "@/../../types/user";
+import { UserDetails } from "@/../../@types/user";
 export const createProject = () => {
   const participants = [] as UserDetails[],
     videos = [] as string[],

@@ -1,5 +1,5 @@
 import faker from "faker";
-import { User as UserType } from "../../../types/user";
+import { User as UserType } from "../../../@types/user";
 
 export const createUser = () => {
   const [fname, lname] = [faker.name.firstName(), faker.name.lastName()];

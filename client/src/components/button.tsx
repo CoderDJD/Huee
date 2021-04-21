@@ -1,10 +1,6 @@
 export default function App() {
   return (
-    <div
-      style={{
-        padding: "1rem",
-      }}
-    >
+    <div className="p-3">
       <h1>Hello</h1>
     </div>
   );
