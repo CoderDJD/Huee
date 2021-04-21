@@ -11,8 +11,4 @@ Please read <a href="https://github.com/CoderDJD/Hoot/blob/main/CONTRIBUTING.md"
 - <a href="https://github.com/yomiAdenaike01">@yomiAdenaike01</a><br>
 - <a href="https://github.com/yomiAdenaike01">@CoderDJD</a><br>
 <h1>🥞 Stack Used</h1>
-<code lang="jsonc">
-{
-  "client" : "React(tsx), React Native, Electron",
-}
-</code>
+Client : React(tsx)(Web), React Native(Android, iOS), Electron(Desktop)
