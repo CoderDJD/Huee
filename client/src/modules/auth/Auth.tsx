@@ -1,9 +1,8 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
 import { Route, RouteComponentProps, Switch } from "react-router";
-const SignIn = lazy(() => import("./sign_in/SignIn"));
-const GetStarted = lazy(() => import("./get_started/GetStarted"));
-
-const Auth = ({ match: { url } }: RouteComponentProps) => {
+const SignIn = lazy(() => import("./signin/SignIn")),
+  GetStarted = lazy(() => import("./signup/SignUp"));
+export default function Auth({ match: { url } }: RouteComponentProps) {
   return (
     <div className="w-full h-full">
       <Switch>
@@ -13,6 +12,4 @@ const Auth = ({ match: { url } }: RouteComponentProps) => {
       </Switch>
     </div>
   );
-};
-
-export default Auth;
+}
