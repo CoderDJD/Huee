@@ -17,7 +17,6 @@ Please read <a href="https://github.com/CoderDJD/Hoot/blob/main/CONTRIBUTING.md"
 <br>
 - <a href="https://github.com/yomiAdenaike01">@CoderDJD</a><br>
 <br>
-<br>
 <h1>🥞 Used</h1>
 <h3>📱 🖥 💻 : React(tsx), React Native, Electron</h3>
 <h3>🥞❤️🛠 : TypeScript, ExpressJS, GraphQL, MongoDB</h3>
