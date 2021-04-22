@@ -43,6 +43,7 @@ export function generateProject(): Project {
     images = generateImages(20, "abstract"),
     designs = generateImages(20, "city");
   return {
+    id: faker.datatype.uuid(),
     description: faker.random.words(),
     name: faker.random.word(),
     designs,

@@ -1,11 +1,13 @@
 import { Project } from "@/../../@types/project";
-import User from "@/../../@types/user";
+import { User } from "@/../../@types/user";
+import { PROJECTS } from "@/stubs/project";
+import { CURRENT_USER } from "@/stubs/users";
 
 export interface RootSliceState {
   currentUser: User;
   projects: Project[];
 }
 export default {
-  currentUser: {} as User,
-  projects: [],
+  currentUser: CURRENT_USER,
+  projects: PROJECTS,
 } as RootSliceState;

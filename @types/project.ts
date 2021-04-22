@@ -9,6 +9,7 @@ export interface ProjectTeam {
 }
 export type SocialMedia = "facebook" | "twitter" | "twitch" | "discord";
 export interface Project {
+  id: string;
   description: string;
   created_date: string;
   private: boolean;
