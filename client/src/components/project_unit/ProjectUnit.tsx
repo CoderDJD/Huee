@@ -1,4 +1,4 @@
-import { Project } from "@/../../@types/project";
+import { Project } from "@globaltypes/project";
 import React, { memo } from "react";
 
 interface Props extends Project {

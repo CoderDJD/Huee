@@ -1,25 +1,25 @@
 import faker from "faker";
 import { generateUser } from "./users";
-import { User, UserDetails } from "@/@types/user";
-import { Project, ProjectTeam } from "@/@types/project";
+import { User, UserDetails } from "@globaltypes/user";
+import { Project, ProjectTeam } from "@globaltypes/project";
 
 export function generateImages(
   count: number,
   key: keyof typeof faker.image = "fashion"
 ) {
   const images = faker.image[key];
-  return count ? [...Array(count)].map(x => images()) : images();
+  return count ? [...Array(count)].map((x) => images()) : images();
 }
 
 export function generateUsers(count: number) {
-  return [...Array(count)].map(x => generateUser());
+  return [...Array(count)].map((x) => generateUser());
 }
 
 export function generateTeam(userList: User[], teamLen: number = 10) {
   return {
     name: faker.name.jobTitle(),
-    createdDate: faker.date.recent().toISOString(),
-    imgUri: faker.image.technics(),
+    created_date: faker.date.recent().toISOString(),
+    img_uri: faker.image.technics(),
     colour: faker.commerce.color(),
     participants: [
       ...Array(teamLen).map(() => {
@@ -28,10 +28,10 @@ export function generateTeam(userList: User[], teamLen: number = 10) {
           name: u.name,
           online: u.online,
           uname: u.uname,
-          email: u.uname
+          email: u.uname,
         } as UserDetails;
-      })
-    ]
+      }),
+    ],
   } as ProjectTeam;
   // TODO : Pick random users
 }
@@ -62,7 +62,7 @@ export function generateProject(): Project {
     prototype_url: "",
     teams,
     images,
-    videos
+    videos,
   } as Project;
 }
 

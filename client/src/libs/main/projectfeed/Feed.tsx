@@ -1,4 +1,4 @@
-import { Project } from "@/../../@types/project";
+import { Project } from "@globaltypes/project";
 import ProjectUnit from "@/components/project_unit/ProjectUnit";
 import React from "react";
 
@@ -10,7 +10,7 @@ interface Props {
 const ProjectListings = ({ projects, onClickProject }: Props) => {
   return (
     <ul className="list-none">
-      {projects.map(projectData => (
+      {projects.map((projectData) => (
         <li key={projectData.id}>
           <ProjectUnit {...projectData} onClickProject={onClickProject} />
         </li>

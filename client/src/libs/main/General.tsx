@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import Filters from "./filters/Filters";
-import { Project } from "@/../../@types/project";
+import { Project } from "@globaltypes/project";
 import { useSelector } from "react-redux";
 import Feed from "./projectfeed/Feed";
 import { RootState } from "@/store";
