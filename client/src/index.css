@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 html,
+#root,
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
+  width: 100%;
   box-sizing: border-box;
-  color: #000011;
   background: #f5f5f5;
+  color: #000011;
 }

@@ -3,14 +3,15 @@ import { UserDetails } from "./user";
 export interface ProjectTeam {
   name: string;
   colour: string; // Any colour they like most likely a selection
-  created_date: string;
+  createdDate: string;
   participants: UserDetails[];
-  img_uri: string;
+  imgUri: string;
 }
 export type SocialMedia = "facebook" | "twitter" | "twitch" | "discord";
 export interface Project {
+  id: string;
   description: string;
-  created_date: string;
+  createdDate: string;
   private: boolean;
   teams: ProjectTeam[];
   social_links: Record<SocialMedia, string>;
@@ -23,6 +24,6 @@ export interface Project {
   name: string;
   views: number;
   videos: string[];
-  prototype_url: string; // Can be a URL or an image
+  prototype_url: string;
   designs: string[];
 }

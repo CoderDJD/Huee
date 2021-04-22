@@ -2,14 +2,14 @@ import { UserDetails } from "./user";
 
 export interface ProjectTeam {
   name: string;
-  colour: string;
+  colour: string; // Any colour they like most likely a selection
   createdDate: string;
   participants: UserDetails[];
-  img_uri: string;
+  imgUri: string;
 }
-
 export type SocialMedia = "facebook" | "twitter" | "twitch" | "discord";
 export interface Project {
+  id: string;
   description: string;
   createdDate: string;
   private: boolean;

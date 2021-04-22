@@ -1,13 +1,22 @@
+import { Project } from "@/../../@types/project";
+import ProjectUnit from "@/components/project_unit/ProjectUnit";
 import React from "react";
 
-export default function Feed(props: Props) {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+interface Props {
+  projects: Project[];
+  onClickProject?: (p: Project) => void;
 }
 
-interface Props {
-  projects: any;
-}
+const ProjectListings = ({ projects, onClickProject }: Props) => {
+  return (
+    <ul className="list-none">
+      {projects.map(projectData => (
+        <li key={projectData.id}>
+          <ProjectUnit {...projectData} onClickProject={onClickProject} />
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default ProjectListings;

@@ -1,7 +1,8 @@
-import { Project, ProjectTeam } from "../@types/project";
 import faker from "faker";
 import { generateUser } from "./users";
 import { User, UserDetails } from "@/@types/user";
+import { Project, ProjectTeam } from "@/@types/project";
+
 export function generateImages(
   count: number,
   key: keyof typeof faker.image = "fashion"
@@ -9,14 +10,16 @@ export function generateImages(
   const images = faker.image[key];
   return count ? [...Array(count)].map(x => images()) : images();
 }
+
 export function generateUsers(count: number) {
   return [...Array(count)].map(x => generateUser());
 }
+
 export function generateTeam(userList: User[], teamLen: number = 10) {
   return {
     name: faker.name.jobTitle(),
     createdDate: faker.date.recent().toISOString(),
-    img_uri: faker.image.technics(),
+    imgUri: faker.image.technics(),
     colour: faker.commerce.color(),
     participants: [
       ...Array(teamLen).map(() => {
@@ -30,7 +33,7 @@ export function generateTeam(userList: User[], teamLen: number = 10) {
       })
     ]
   } as ProjectTeam;
-  // Pick random users
+  // TODO : Pick random users
 }
 export function pickRandomFromArray<T>(params: T[]) {
   return params[Math.random() * params.length];
@@ -43,6 +46,7 @@ export function generateProject(): Project {
     images = generateImages(20, "abstract"),
     designs = generateImages(20, "city");
   return {
+    id: faker.datatype.uuid(),
     name: faker.random.word(),
     createdDate: faker.date.recent().toISOString(),
     description: faker.random.words(),
