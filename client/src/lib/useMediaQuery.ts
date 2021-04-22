@@ -11,7 +11,7 @@ const decideScreenSize = (elementWidth?: number): Screen => {
   }
   return res;
 };
-export const useMediaQuery = (element?: HTMLElement) => {
+const useMediaQuery = <T extends HTMLElement>(element?: T) => {
   const [state, setState] = useState<Screen>("desktop");
   useLayoutEffect(() => {
     if (element) {
@@ -23,3 +23,4 @@ export const useMediaQuery = (element?: HTMLElement) => {
   }, [element]);
   return state;
 };
+export default useMediaQuery;

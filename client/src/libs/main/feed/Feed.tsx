@@ -9,7 +9,7 @@ interface Props {
 
 const ProjectListings = ({ projects, onClickProject }: Props) => {
   return (
-    <ul className="list-none h-full overflow-x-hidden w-7/12">
+    <ul className="list-none h-full overflow-x-hidden w-2/3">
       {projects.map((projectData) => (
         <li key={projectData.id}>
           <ProjectUnit {...projectData} onClickProject={onClickProject} />

@@ -32,6 +32,7 @@ const General = () => {
       <div className="flex flex-col h-full">
         <Filters filters={filters} onChangeFilters={onChangeFilters} />
         <div className="flex w-full items-start flex-1 h-full">
+          <div className="bg-white w-1/3"></div>
           <Feed projects={projects} onClickProject={onClickProject} />
           <ViewProjectDetails
             onClearProject={onClearProject}
