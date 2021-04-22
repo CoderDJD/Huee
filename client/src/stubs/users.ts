@@ -1,16 +1,19 @@
-import { User as UserType } from "@/../../@types/user";
+import { User } from "@/@types/user";
 import faker from "faker";
 
 export const generateUser = () => {
   const [fname, lname] = [faker.name.firstName(), faker.name.lastName()];
-  return {
+  const obj = {
+    id: faker.datatype.uuid(),
     name: `${fname} ${lname}`,
     uname: faker.internet.userName(),
     email: faker.internet.email(),
-    img_uri: faker.image.avatar(),
     dob: faker.date.past().toISOString(),
-    id: faker.datatype.uuid(),
-  } as UserType;
+    online: faker.datatype.boolean(),
+    imgUri: faker.image.avatar(),
+    createdDate: faker.date.recent().toISOString()
+  } as User;
+  return obj;
 };
 
 export const users = [...Array(20)].map(() => generateUser());

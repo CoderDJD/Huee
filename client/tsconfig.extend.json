@@ -5,7 +5,6 @@
       "@/*": ["./*"],
       "@globaltypes": ["./../../types/*"],
       "@store": ["./src/store/*"],
-      "@scss": ["./scss/*"],
       "@lib/*": ["./lib/*"]
     }
   }

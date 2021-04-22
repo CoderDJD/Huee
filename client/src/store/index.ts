@@ -1,4 +1,4 @@
-import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import rootSlice from "./root";
 
 export const store = configureStore({

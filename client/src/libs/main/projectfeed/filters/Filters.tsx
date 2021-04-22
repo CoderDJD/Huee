@@ -5,7 +5,7 @@ interface Props {
   onChangeFilters(filters: Record<string, string>): void;
 }
 
-const Filters = ({ onChangeFilters, filters }: Props) => {
+export default function Filters({ onChangeFilters, filters }: Props) {
   return (
     <div className="flex items-center w-full">
       <input type="text" placeholder="Search by category, Company or" />
@@ -31,6 +31,4 @@ const Filters = ({ onChangeFilters, filters }: Props) => {
       </div>
     </div>
   );
-};
-
-export default Filters;
+}
