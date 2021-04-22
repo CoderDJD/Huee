@@ -11,4 +11,7 @@ export interface User {
   projects?: Project[];
 }
 
-export type UserDetails = Pick<User, "email" | "uname" | "name" | "online">;
+export type UserDetails = Pick<
+  User,
+  "email" | "uname" | "name" | "online" | "img_uri"
+>;

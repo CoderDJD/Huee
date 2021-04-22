@@ -1,7 +1,7 @@
 import faker from "faker";
 import { generateUser } from "./users";
 import { User, UserDetails } from "@globaltypes/user";
-import { Project, ProjectTeam } from "@globaltypes/project";
+import { ListingStatus, Project, ProjectTeam } from "@globaltypes/project";
 
 export function generateImages(
   count: number,
@@ -36,26 +36,26 @@ export function generateTeam(userList: User[], teamLen: number = 10) {
   // TODO : Pick random users
 }
 export function pickRandomFromArray<T>(params: T[]) {
-  return params[Math.random() * params.length];
+  return params[~~(Math.random() * params.length)];
 }
 export function generateProject(): Project {
-  const ALL_PARTICIPANTS = [...Array(20)].map(generateUser);
+  const ALL_PARTICIPANTS = [...Array(20)].map(() => generateUser());
 
   const videos = [] as string[],
+    status = ["featured", "hot", "new", "trending"] as ListingStatus[],
     teams = [generateTeam(ALL_PARTICIPANTS)],
     images = generateImages(20, "abstract"),
     designs = generateImages(20, "city");
   return {
     id: faker.datatype.uuid(),
-    name: faker.random.word(),
-    createdDate: faker.date.recent().toISOString(),
-    description: faker.random.words(),
+    name: faker.company.companyName(),
+    created_date: faker.date.recent().toISOString(),
+    description: faker.lorem.paragraph(),
     designs,
     private: faker.datatype.boolean(),
     owner_details: pickRandomFromArray(ALL_PARTICIPANTS),
     roadmap: {} as Record<string, string>[],
     social_links: {} as Record<string, string>,
-    created_date: faker.date.recent().toISOString(),
     completed: faker.datatype.boolean(),
     views: faker.datatype.number(),
     logo: faker.image.business(),
@@ -63,6 +63,7 @@ export function generateProject(): Project {
     teams,
     images,
     videos,
+    listing_status: status[~~(Math.random() * status.length)] as ListingStatus,
   } as Project;
 }
 

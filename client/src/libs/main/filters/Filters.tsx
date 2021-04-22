@@ -19,7 +19,7 @@ export default function Filters({ onChangeFilters, filters }: Props) {
       ))}
       <div className="items-center justify-between flex">
         <div className="flex items-center">
-          <button>Jobs for you</button>
+          <button>Projects for you</button>
           <button>Popular</button>
         </div>
         <span>Sort:</span>
