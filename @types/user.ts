@@ -1,3 +1,4 @@
+import { Project } from "./project";
 export interface User {
   id: string;
   name: string;
@@ -5,8 +6,9 @@ export interface User {
   email: string;
   dob: string;
   online: boolean;
-  createdDate: string;
-  imgUri: string;
+  created_date: string;
+  img_uri: string;
+  projects: Project[];
 }
 
 export type UserDetails = Pick<User, "email" | "uname" | "name" | "online">;

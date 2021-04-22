@@ -1,17 +1,22 @@
 import { UserDetails } from "./user";
-
 export interface ProjectTeam {
   name: string;
-  colour: string; // Any colour they like most likely a selection
-  createdDate: string;
+  colour: string; // Aesthetics, Yeah.
+  created_date: string;
   participants: UserDetails[];
-  imgUri: string;
+  img_uri: string;
 }
-export type SocialMedia = "facebook" | "twitter" | "twitch" | "discord";
+
+export type SocialMedia =
+  | "facebook"
+  | "twitter"
+  | "twitch"
+  | "discord"
+  | "youtube";
 export interface Project {
   id: string;
   description: string;
-  createdDate: string;
+  created_date: string;
   private: boolean;
   teams: ProjectTeam[];
   social_links: Record<SocialMedia, string>;
