@@ -1,4 +1,4 @@
-import { User } from "@/@types/user";
+import { User } from "@globaltypes/user";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { RootSliceState } from "./state";
 
@@ -6,5 +6,5 @@ import { RootSliceState } from "./state";
 export default {
   UPDATE_CURRENT_USER(state: RootSliceState, action: PayloadAction<User>) {
     state.currentUser = action.payload;
-  }
+  },
 };

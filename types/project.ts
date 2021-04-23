@@ -13,6 +13,7 @@ export type SocialMedia =
   | 'twitch'
   | 'discord'
   | "youtube";
+export type ListingStatus = "trending" | "hot" | "featured";
 export interface Project {
   id: string;
   description: string;
@@ -31,4 +32,5 @@ export interface Project {
   videos: string[];
   prototype_url: string;
   designs: string[];
+  listing_status: ListingStatus;
 }

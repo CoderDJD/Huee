@@ -8,7 +8,10 @@ export interface User {
   online: boolean;
   created_date: string;
   img_uri: string;
-  projects: Project[];
+  projects?: Project[];
 }
 
-export type UserDetails = Pick<User, "email" | "uname" | "name" | "online">;
+export type UserDetails = Pick<
+  User,
+  "email" | "uname" | "name" | "online" | "img_uri"
+>;
