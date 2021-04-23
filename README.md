@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="./assets/logo.png" width="216">
+<img src="./assets/logo.png" width="216">
+
   <h3 align="center">Taking projects and movements out of the Earth 🌏🚀.</h3>
 </p>
 <h1>Code Of Conduct</h1>
