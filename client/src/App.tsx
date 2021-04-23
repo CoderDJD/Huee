@@ -16,11 +16,11 @@ const App = () => {
     let t: any = null;
     function callSetTimeout(this: Window & typeof globalThis) {
       t = setTimeout(() => {
-        const res = screensAsArray.find((x) => x.size < this.innerWidth);
+        const res = screensAsArray.find(x => x.size < this.innerWidth);
         if (res) setScreenSize(res.screen);
       }, 500);
     }
-    window.onresize = function () {
+    window.onresize = function() {
       if (!!t) {
         callSetTimeout.apply(this);
       } else {

@@ -3,8 +3,20 @@ module.exports = {
   mode: "jit",
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {}
+    colors: {
+      transparent: "transparent",
+      primary: {
+        100: "#050510",
+        200: "#151522"
+      },
+      secondary: {
+        100: "#f5f5f5",
+        200: "#5d7290",
+        300: "#fc5185"
+      }
+    }
   },
+
   variants: {
     extend: {}
   },
