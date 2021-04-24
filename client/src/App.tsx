@@ -21,9 +21,8 @@ const App = () => {
       }, 500);
     }
     window.onresize = function() {
-      if (!!t) {
-        callSetTimeout.apply(this);
-      } else {
+      if (!!t) callSetTimeout.apply(this);
+      else {
         clearTimeout(t);
         callSetTimeout.apply(this);
       }

@@ -1,7 +1,7 @@
 import { UserDetails } from "./user";
 export interface ProjectTeam {
   name: string;
-  colour: string; // Aesthetics,
+  colour: string; // Aesthetics
   created_date: string;
   participants: UserDetails[];
   img_uri: string;
@@ -10,8 +10,8 @@ export interface ProjectTeam {
 export type SocialMedia =
   | "facebook"
   | "twitter"
-  | 'twitch'
-  | 'discord'
+  | "twitch"
+  | "discord"
   | "youtube";
 export type ListingStatus = "trending" | "hot" | "featured";
 export interface Project {
