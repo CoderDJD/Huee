@@ -1,7 +1,7 @@
-import { Project } from "@globaltypes/project";
-import { User } from "@/../../types/user";
-import { PROJECTS } from "@/stubs/project";
-import { CURRENT_USER } from "@/stubs/users";
+import { Project } from '@/../../@types/project';
+import { User } from '@/../../@types/user';
+import { PROJECTS } from '@/stubs/project';
+import { CURRENT_USER } from '@/stubs/users';
 
 export interface RootSliceState {
   currentUser: User;
@@ -9,7 +9,7 @@ export interface RootSliceState {
 }
 const state: RootSliceState = {
   currentUser: CURRENT_USER as User,
-  projects: PROJECTS,
+  projects: PROJECTS
 };
 
 export default state;

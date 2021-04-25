@@ -1,4 +1,4 @@
-export const timeAgo = (date: Date | number | string) => {
+export default function timeAgo(date: Date | number | string) {
   let d = date;
   if (typeof date === "string") {
     d = +new Date(date);
@@ -16,11 +16,11 @@ export const timeAgo = (date: Date | number | string) => {
     { label: "minute", time: 60 },
     { label: "less than minute", time: 0 },
   ];
-  const t = map.find((x) => x.time < d);
+  const t = map.find(x => x.time < d);
   if (t) {
     const resnum = ~~(+d / t.time);
     return `${resnum} ${t.label}${resnum > 1 ? "s" : ""} ago`;
   } else {
     return "";
   }
-};
+}

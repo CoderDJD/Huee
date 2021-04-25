@@ -1,7 +1,7 @@
 import faker from "faker";
 import { generateUser } from "./users";
-import { User, UserDetails } from "@globaltypes/user";
-import { ListingStatus, Project, ProjectTeam } from "@globaltypes/project";
+import { User, UserDetails } from "@/../../@types/user";
+import { ListingStatus, Project, ProjectTeam } from "@/../../@types/project";
 
 export function generateImages(
   count: number,

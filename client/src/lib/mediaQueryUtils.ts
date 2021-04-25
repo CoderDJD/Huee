@@ -9,7 +9,7 @@ export interface ScreenSize {
   screen: Screen;
   size: number;
 }
-export const screensAsArray = Object.keys(screens).map((x) => ({
+export const screensAsArray = Object.keys(screens).map(x => ({
   screen: x as Screen,
   size: screens[x as Screen],
 }));

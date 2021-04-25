@@ -1,4 +1,4 @@
-import { User } from "@globaltypes/user";
+import { User } from "@/../../@types/user";
 import faker from "faker";
 
 export const generateUser = (): User => {

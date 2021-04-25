@@ -1,4 +1,4 @@
-import { RootState } from "..";
+import { RootState } from '..';
 export class RootSelectorMethods {}
 export default class RootSelectors {
   static isLoggedIn({ root: { currentUser } }: RootState) {

@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
-import reducers from "./reducers";
-import initialState from "./state";
+import { createSlice } from '@reduxjs/toolkit';
+import reducers from './reducers';
+import initialState from './state';
 export default createSlice({
-  name: "root",
+  name: 'root',
   initialState,
-  reducers,
+  reducers
 });

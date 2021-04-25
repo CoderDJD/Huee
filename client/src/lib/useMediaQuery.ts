@@ -1,6 +1,6 @@
-import React, { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { Screen, screensAsArray } from "./mediaQueryUtils";
-const decideScreenSize = (elementWidth?: number): Screen => {
+function decideScreenSize(elementWidth?: number): Screen {
   let res: Screen = "desktop";
   if (elementWidth) {
     const elementSizeQuery = screensAsArray.find((x) => x.size < elementWidth);
@@ -11,6 +11,7 @@ const decideScreenSize = (elementWidth?: number): Screen => {
   }
   return res;
 };
+
 const useMediaQuery = <T extends HTMLElement>(element?: T) => {
   const [state, setState] = useState<Screen>("desktop");
   useLayoutEffect(() => {
