@@ -40,7 +40,6 @@
 Contributors helping to review/merge PR's.
 
 - [@yomiAdenaike01](https://github.com/yomiAdenaike01/)<br>
-- [@CoderDJD](https://github.com/CoderDJD/)
 
 # Contributing
 
