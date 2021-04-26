@@ -7,7 +7,7 @@
   <strong>Projects and movements, be ready to blast off. 🚀</strong>
 </p>
 <p align="center">
-  <a href="https://discord.com/invite/ybTdpSApTQ">
+  <a href="https://discord.gg/ybTdpSApTQ">
     <img src="https://img.shields.io/discord/808703111174029364?color=Online&label=Discord&style=for-the-badge">
   </a>
 </p>
