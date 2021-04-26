@@ -15,9 +15,10 @@ PLEASE READ CODE_OF_CONDUCT.md BEFORE GOING ANY FURTHER.
 - Fork the repository, clone it to your local machine, and run these commands in the root directory of the project.
 
   ```sh
-  npm install
+  npm install # yarn for yarn users
   cd client/
   npm install
+  yarn # compulsory, make sure you have yarn installed.
   ```
 
 - Make the necessary changes. And from the bottom of our heart, thanks. To stage, commit and push changes, run the following commands.
