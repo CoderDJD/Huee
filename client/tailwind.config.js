@@ -3,22 +3,21 @@ module.exports = {
   darkMode: "class",
   theme: {
     colors: {
+      white: "#f5f5f5",
       transparent: "transparent",
       primary: {
         100: "#050510",
-        200: "#151522",
-      },
-      secondary: {
-        100: "#f5f5f5",
-        200: "#5d7290",
+        200: "#7789d4",
         300: "#fc5185",
-        400: "#7789d4",
+      },
+      gray: {
+        100: "#91a3b0",
+        200: "#5d7290",
+        300: "#1e1e1e",
+        400: "#151522",
       },
     },
   },
-
-  variants: {
-    extend: {},
-  },
+  variants: { extend: {} },
   plugins: [],
 };
