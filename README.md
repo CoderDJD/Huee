@@ -14,7 +14,7 @@
 <h3 align="center">
   <a href="https://github.com/CoderDJD/Hoot/blob/staging/CONTRIBUTING.md">Contribute</a>
   <span> | </span>
-  <a href="https://discord.gg/82HzQCJCDg">Community</a>
+  <a href="https://discord.gg/ybTdpSApTQ">Community</a>
 </h3>
 
 # Notice
