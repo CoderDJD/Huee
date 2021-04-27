@@ -6,15 +6,15 @@ This is a document which will guide you through custom styles, spacings and size
 
 - [Typograhpy](#Typography)
   - [Fonts](#Fonts)
-  - [Importing](#Importing)
-  - [Classes]()
-- [Colors]()
+  - [Web Embeds](#Embeds)
+  - Classes
+- [Colors](#Colors)
   - [Pallete]()
   - [Classes]()
 
 # Typography
 
-Contrary to many applications, we use two fonts for the entire app.
+Contrary to many applications, we use [two fonts](https://fonts.google.com/share?selection.family=Roboto:wght@400;700%7CUbuntu:wght@400;500) for the entire app.
 And uses two weights, regular and bold.
 
 ## Fonts
@@ -36,11 +36,11 @@ This font should be used for :
 
 - `Paragraphs` : `p`
 - `Body Text`
-- All forms of secondary texts unless specified as `font-sans` in `classname`.
+- All forms of secondary texts unless specified as `font-sans` in `className`.
 
-## Imports
+## Web Embeds
 
-`HTML` :
+HTML's `link` method.:
 
 ```html
 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -49,3 +49,17 @@ This font should be used for :
   rel="stylesheet"
 />
 ```
+
+CSS `@import` :
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;500&display=swap");
+```
+
+## Classes
+
+Bold : `font-bold`
+
+Roboto : `font-sans`
+
+Ubuntu : `font-body`
