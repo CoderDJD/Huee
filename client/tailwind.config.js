@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     colors: {
       white: "#f5f5f5",
+      accent: "#050510",
       transparent: "transparent",
       primary: {
-        100: "#050510",
+        100: "#fc5185",
         200: "#7789d4",
-        300: "#fc5185",
       },
       gray: {
         100: "#91a3b0",
