@@ -68,11 +68,11 @@ Ubuntu : `font-body`
 | Tag           | Font Size | Weight     |
 | ------------- | --------- | ---------- |
 | **H1**        | 60px      | 700        |
-| **H2**        | 44px      | 700        |
-| **H3**        | 32px      | 700        |
-| **H4**        | 24px      | 700        |
-| **P**         | 16px      | 500 \| 700 |
-| **P (small)** | 14px      | 500 \| 700 |
+| **H2**        | 48px      | 700        |
+| **H3**        | 36px      | 700        |
+| **H4**        | 30px      | 700        |
+| **P**         | 24px      | 500 \| 700 |
+| **P (small)** | 20px      | 500 \| 700 |
 
 # Pallete
 
@@ -88,8 +88,8 @@ Ubuntu : `font-body`
 export default function App() {
   return (
     <div className="bg-accent">
-      <h1 className="text-white font-sans"></h1>
-      <p className="text-white font-body"></p>
+      <h1 className="text-white font-sans" />
+      <p className="text-white font-body" />
     </div>
   );
 }
@@ -107,10 +107,10 @@ export default function App() {
 export default function App() {
   return (
     <div className="bg-accent">
-      <h1 className="text-white font-sans"></h1>
-      <h3 className="text-primary-100"></h3>
-      <p className="text-white font-body"></p>
-      <h4 className="text-primary-200"></h4>
+      <h1 className="text-white font-sans" />
+      <h3 className="text-primary-100" />
+      <p className="text-white font-body" />
+      <h4 className="text-primary-200" />
     </div>
   );
 }
@@ -132,20 +132,20 @@ export default function App() {
 export default function App() {
   return (
     <div className="bg-accent">
-      <h1 className="text-white font-sans"></h1>
-      <h3 className="text-primary-100"></h3>
-      <p className="text-white font-body"></p>
-      <h4 className="text-primary-200"></h4>
+      <h1 className="text-white font-sans" />
+      <h3 className="text-primary-100" />
+      <p className="text-white font-body" />
+      <h4 className="text-primary-200" />
       <div className="bg-gray-100">
-        <h1></h1>
+        <h1 />
         <div className="bg-gray-200">
-          <h1></h1>
+          <h1 />
         </div>
         <div className="bg-gray-300">
-          <h1></h1>
+          <h1 />
         </div>
         <div className="bg-gray-400">
-          <h1></h1>
+          <h1 />
         </div>
       </div>
     </div>

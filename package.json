@@ -1,5 +1,8 @@
 {
   "private": true,
+  "workspaces": [
+    "client"
+  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
