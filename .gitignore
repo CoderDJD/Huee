@@ -1,13 +1,13 @@
 .DS_Store
 .env
-/out/
+out/
 *.log
-/.pnp
+.pnp
 .yarn
-/build
-/.next
+build
 .vercel
 .pnp.js
+client/.next
 /coverage
 .env.local
 node_modules/
