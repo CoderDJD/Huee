@@ -1,62 +1,58 @@
 import { FaGithubAlt, FaGoogle, FaDiscord } from "react-icons/fa";
 import logo from "../icon.svg";
-import Button from "./components/Button";
-import devIcon from "./assets/Coding_SVG.svg";
 export default function Auth() {
   return (
-    <article className="bg-accent w-screen h-screen cursor-default">
-      <article className="flex rounded-md w-full h-screen">
-        <section className="bg-white flex flex-col w-full h-full p-5">
-          <article className="flex space-x-4">
-            <img src={logo} alt="Hoot Logo" className="w-auto h-14" />
-            <h1 className="text-accent text-6xl font-sans font-bold">Hoot</h1>
-          </article>
-          <img src={devIcon} alt="Landing Page Icon" className="w-full h-4/5" />
-          <h1 className="text-6xl text-primary-100 font-sans font-bold ">
-            Helping you blast off 🚀
-          </h1>
-        </section>
-
-        <article className="w-full p-12">
-          <section className="flex flex-col space-y-4 overflow-hidden p-2">
-            <h1 className="text-white font-bold font-sans text-8xl">Welcome</h1>
-            <p className="text-white font-ubuntu text-4xl flex-wrap">
-              By logging in, you accept our{" "}
-              <a href="/auth" className="text-primary-100">
-                Terms of Service
-              </a>{" "}
-              and our{" "}
-              <a href="/auth" className="text-primary-100">
-                Privacy policy
-              </a>
-              .
-            </p>
-          </section>
-
-          <section className="space-y-10 mt-10 flex-wrap text-white">
-            <Button>
-              <FaGoogle className="w-auto h-10" />
-              <h1 className="text-6xl">Google</h1>
-            </Button>
-            <Button color="primary-200">
-              <FaGithubAlt className="w-auto h-10" />
-              <h1 className="text-6xl">Github</h1>
-            </Button>
-          </section>
-          <article className="flex align-center justify-center space-x-4 m-10">
-            <a
-              href="https://github.com/CoderDJD/Hoot"
-              className="text-white flex align-center items-center">
-              <FaGithubAlt className="w-auto h-24" />
+    <div className="bg-primary-100 flex flex-col justify-center items-center w-screen h-screen cursor-default">
+      <section className="bg-primary-200 flex flex-col space-y-8 p-12 rounded-md w-3/5">
+        <article className="flex flex-col space-y-8">
+          <span className="text-secondary-100 font-bold font-sans text-4xl">
+            Welcome
+          </span>
+          <span className="text-secondary-100 font-ubuntu text-2xl">
+            By logging in, you accept our{" "}
+            <a href="/auth" className="text-secondary-300">
+              Terms of Service
+            </a>{" "}
+            and our{" "}
+            <a href="/auth" className="text-secondary-300">
+              Privacy policy
             </a>
-            <a
-              href="https://discord.gg/ybTdpSApTQ"
-              className="text-primary-200 flex align-center items-center">
-              <FaDiscord className="w-auto h-24" />
-            </a>
-          </article>
+            .
+          </span>
         </article>
-      </article>
-    </article>
+
+        <article className="space-y-4">
+          <div className="bg-secondary-200 flex align-middle items-center text-secondary-100 rounded-sm font-ubuntu w-max p-2 space-x-2 cursor-pointer">
+            <FaGoogle />
+            <span className="text-2xl">Google</span>
+          </div>
+          <div className=" bg-secondary-200 flex align-middle items-center text-secondary-100 rounded-sm font-ubuntu w-max p-2 space-x-2 cursor-pointer">
+            <FaGithubAlt />
+            <span className="text-2xl">Github</span>
+          </div>
+        </article>
+      </section>
+      <div className="flex flex-row justify-between items-center absolute bottom-0 w-full p-5">
+        <a
+          className="text-secondary-100 font-ubuntu flex justify-center items-center space-x-1 p-1"
+          href="https://hoot.vercel.app/">
+          <img src={logo} alt="logo" className="w-8 rounded-xl" />
+          <span className="text-4xl">Hoot</span>
+        </a>
+
+        <section className="flex space-x-8">
+          <a
+            className="text-secondary-200 font-ubuntu flex justify-center items-center space-x-1 p-1"
+            href="https://github.com/CoderDJD/Hoot">
+            <FaGithubAlt className="w-auto h-16" />
+          </a>
+          <a
+            className="text-secondary-400 flex justify-center items-center space-x-1 p-1"
+            href="https://discord.gg/ybTdpSApTQ">
+            <FaDiscord className="w-auto h-16" />
+          </a>
+        </section>
+      </div>
+    </div>
   );
 }
