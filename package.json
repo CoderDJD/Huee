@@ -1,5 +1,14 @@
 {
+  "name": "@hoot/main",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "client"
+    ],
+    "nohoist": [
+      "**"
+    ]
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
@@ -16,5 +25,8 @@
   "scripts": {
     "commit": "cz"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "unstated": "^2.1.1"
+  }
 }
