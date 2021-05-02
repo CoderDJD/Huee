@@ -1,6 +1,16 @@
-import { FaGithubAlt, FaTwitterSquare } from "react-icons/fa";
-import { authWithGithub } from "../../firebase";
-export default function SignUp() {
+import { FaGithubAlt, FaTwitterSquare, FaGoogle } from "react-icons/fa";
+import socialMediaAuth from "../services/auth";
+import {
+  twitterProvider,
+  googleProvider,
+  githubProvider,
+} from "../services/authProviders";
+
+export default function Auth() {
+  const handleOnClick = async provider => {
+    const res = await socialMediaAuth(provider);
+    console.log(res);
+  };
   return (
     <div className="bg-gray-400 w-full h-full grid grid-cols-1 grid-rows-3 md:grid-cols-3 gap-4">
       <div className="flex flex-col m-auto p-4 rounded-md w-full sm:w-400 bg-gray-300 col-end-2 md:col-start-2 row-start-2 gap-4">
@@ -19,13 +29,29 @@ export default function SignUp() {
           </p>
         </div>
         <div className="flex flex-col items-start space-y-4">
-          <button className="flex gap-2 items-center" onClick={authWithGithub}>
+          <button
+            className="flex gap-2 items-center"
+            onClick={() => {
+              handleOnClick(githubProvider);
+            }}>
             <FaGithubAlt />
             Github
           </button>
-          <button className="flex gap-2 items-center">
+          <button
+            className="flex gap-2 items-center"
+            onClick={() => {
+              handleOnClick(twitterProvider);
+            }}>
             <FaTwitterSquare />
             Twitter
+          </button>
+          <button
+            className="flex gap-2 items-center"
+            onClick={() => {
+              handleOnClick(googleProvider);
+            }}>
+            <FaGoogle />
+            Google
           </button>
         </div>
       </div>

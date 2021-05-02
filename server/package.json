@@ -1,0 +1,9 @@
+{
+  "name": "@hoot/server",
+  "author": "Joshua Daniel D",
+  "version": "0.1.0",
+  "description": "The server for Hoot. Again, might be published.",
+  "main": "index.js",
+  "scripts": {},
+  "license": "MIT"
+}

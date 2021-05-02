@@ -1,8 +1,13 @@
 {
+  "name": "hoot",
+  "workspaces": {
+    "packages": [
+      "client",
+      "server"
+    ]
+  },
   "private": true,
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^7.25.0",
@@ -16,9 +21,14 @@
   "scripts": {
     "commit": "cz"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderDJD/Hoot.git"
+  },
+  "author": "Joshua Daniel D",
   "license": "MIT",
-  "dependencies": {
-    "firebase": "^8.4.3",
-    "react-icons": "^4.2.0"
-  }
+  "bugs": {
+    "url": "https://github.com/CoderDJD/Hoot/issues"
+  },
+  "homepage": "https://github.com/CoderDJD/Hoot#readme"
 }
