@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.font-body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+h1 {
+  @apply text-4xl text-white font-sans font-bold;
+}
+h2 {
+  @apply text-3xl text-white font-sans font-bold;
+}
+h3 {
+  @apply text-2xl text-white font-sans font-bold;
+}
+h4 {
+  @apply text-xl text-white font-sans font-bold;
+}
+p {
+  @apply text-lg text-gray-100 font-body font-bold;
+}
+p.small {
+  @apply text-base text-gray-100 font-body;
+}
+button {
+  @apply text-lg text-white bg-gray-200 font-body font-bold p-2 rounded-md hover:bg-gray-100;
+}
+div.tooltip {
+  @apply text-base text-white bg-gray-200 font-sans font-bold p-1 w-max rounded-lg;
+}
+a {
+  @apply text-accent font-sans font-bold;
+}

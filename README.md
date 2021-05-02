@@ -15,11 +15,11 @@
   <a href="https://github.com/CoderDJD/Hoot/blob/staging/CONTRIBUTING.md">Contribute</a>
   <span> | </span>
   <a href="https://discord.gg/ybTdpSApTQ">Community</a>
+  <span> | </span>
+  <a href="https://www.termsofservicegenerator.net/live.php?token=ncJ7hUXfgDM9UDva9rEWkeO6Ps6JQ6Ch">Terms of Service</a>
+  <span> | </span>
+  <a href="https://www.privacypolicies.com/live/0326131b-f979-4fc5-aa5e-d3d20e72aa10">Privacy Policy</a>
 </h3>
-
-# Notice
-
-**WE WILL BE WORKING ON JUST THE FRONTEND (WEB) FOR THE NEXT TWO MONTHS. BACKEND AND LOGIC WILL BE HOOKED UP IN THE END. MOBILE AND SERVER FOLDERS NOT TO BE REMOVED. THIS IS AN EFFORT TAKEN TO MAXIMIZE CHANCES OF FUNDING AND MINIMIZE WORKLOADS.**
 
 ## Structure
 
@@ -30,7 +30,7 @@
 | [@/components](client/src/components) |            Components for App.tsx            |
 | [@/modules](client/src/modules)       |        Separate pages used in routing        |
 | [@/lib](client/src/lib)               | Scripts and custom functions used in the app |
-| [/@types](@types)                     |      Types for the frontend and backend      |
+| [/@types](@types)                     |     Types for the frontend and backend.      |
 | [/server](server)                     |            Backend API / GraphQL             |
 | [/mobile](mobile)                     |               React Native App               |
 | [/assets](assets)                     |              All assets needed               |
