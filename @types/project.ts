@@ -7,17 +7,11 @@ export interface ProjectTeam {
   img_uri: string;
 }
 
-export type SocialMedia =
-  | "facebook"
-  | "twitter"
-  | "twitch"
-  | "discord"
-  | "youtube";
+export type SocialMedia = "facebook" | "twitter" | "twitch" | "youtube";
 export type ListingStatus = "trending" | "hot" | "featured";
 export interface Project {
   id: string;
   description: string;
-  created_date: string;
   private: boolean;
   teams: ProjectTeam[];
   social_links: Record<SocialMedia, string>;

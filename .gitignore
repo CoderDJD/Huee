@@ -13,3 +13,4 @@ yarn-error.log*
 .yarn
 .vercel
 build
+__pycache__
