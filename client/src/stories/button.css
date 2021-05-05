@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+:root {
+  --gray-300: #050510ff;
+  --gray-200: #5d7290ff;
+  --gray-100: #91a3b0ff;
+  --white: #f5f5f5ff;
+  --accent: #4a0ffa;
+}
+
+.storybook-button {
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.storybook-button:hover {
+  background-color: var(--gray-100);
+}
+.storybook-button--primary {
+  background-color: var(--accent);
+}
+.storybook-button--secondary {
+  background-color: var(--gray-200);
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}

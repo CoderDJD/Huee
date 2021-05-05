@@ -1,8 +1,9 @@
-import Auth from "./auth";
-import Home from "./home";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { onAuthStateChange } from "./services/firebase";
-import { useState, useEffect } from "react";
 import { UserProvider } from "./userContext";
+const Auth = lazy(() => import("./auth"));
+const Home = lazy(() => import("./home"));
+
 export default function App() {
   const [state, setState] = useState({ user: null });
   useEffect(() => {
@@ -11,18 +12,19 @@ export default function App() {
       unsubscribe();
     };
   }, []);
-  if (!state.user)
-    return (
-      <div className="bg-gray-400 w-screen h-screen p-1">
-        <Auth />
-      </div>
-    );
-  else
-    return (
-      <UserProvider value={state}>
-        <div className="bg-gray-400 w-screen h-screen p-1">
+  return (
+    <UserProvider value={state}>
+      {state.user ? (
+        <Suspense
+          fallback={<div className="bg-gray-400 w-screen h-screen"></div>}>
           <Home />
-        </div>
-      </UserProvider>
-    );
+        </Suspense>
+      ) : (
+        <Suspense
+          fallback={<div className="bg-gray-400 w-screen h-screen"></div>}>
+          <Auth />
+        </Suspense>
+      )}
+    </UserProvider>
+  );
 }

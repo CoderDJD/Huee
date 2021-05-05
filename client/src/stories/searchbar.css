@@ -1,0 +1,26 @@
+article {
+  padding: 4px;
+  background-color: var(--gray-100);
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  color: var(--accent);
+}
+input {
+  font-weight: 700;
+  padding: 0.75rem;
+  background-color: var(--gray-100);
+  border: none;
+  border-radius: 16px;
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+  color: #ffffff;
+}
+
+::placeholder {
+  color: var(--accent);
+  opacity: 1;
+}

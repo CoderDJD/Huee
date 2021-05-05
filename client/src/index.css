@@ -23,12 +23,6 @@ p {
 p.small {
   @apply text-base text-gray-100 font-body;
 }
-button {
-  @apply text-lg text-white bg-gray-200 font-body font-bold p-2 rounded-md hover:bg-gray-100;
-}
 div.tooltip {
   @apply text-base text-white bg-gray-200 font-sans font-bold p-1 w-max rounded-lg;
-}
-a {
-  @apply text-accent font-sans font-bold;
 }
