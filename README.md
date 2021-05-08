@@ -23,17 +23,15 @@
 
 ## Structure
 
-| Directory                             |                 Description                  |
-| :------------------------------------ | :------------------------------------------: |
-| [/client](client)                     |               ReactTSX Client                |
-| [/client/src](client/src)             |                  Actual TSX                  |
-| [@/components](client/src/components) |            Components for App.tsx            |
-| [@/modules](client/src/modules)       |        Separate pages used in routing        |
-| [@/lib](client/src/lib)               | Scripts and custom functions used in the app |
-| [/@types](@types)                     |     Types for the frontend and backend.      |
-| [/server](server)                     |            Backend API / GraphQL             |
-| [/mobile](mobile)                     |               React Native App               |
-| [/assets](assets)                     |              All assets needed               |
+| Directory                             |             Description             |
+| :------------------------------------ | :---------------------------------: |
+| [/client](client)                     |           ReactTSX Client           |
+| [/client/src](client/src)             |             Actual TSX              |
+| [@/components](client/src/components) |       Components for App.tsx        |
+| [/@types](@types)                     | Types for the frontend and backend. |
+| [/server](server)                     |        Backend API / GraphQL        |
+| [/mobile](mobile)                     |          React Native App           |
+| [/assets](assets)                     |          All assets needed          |
 
 # Maintainers
 
