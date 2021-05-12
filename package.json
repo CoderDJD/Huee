@@ -3,7 +3,7 @@
   "workspaces": {
     "packages": [
       "client",
-      "server"
+      "errol"
     ]
   },
   "private": true,
@@ -25,10 +25,21 @@
     "type": "git",
     "url": "git+https://github.com/CoderDJD/Hoot.git"
   },
-  "author": "Joshua Daniel D",
+  "author": {
+    "name": "Joshua Daniel D",
+    "email": "natechnologies2007@gmail.com",
+    "url": "https://twitter.com/CoderDJD/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CoderDJD/Hoot/issues"
   },
-  "homepage": "https://github.com/CoderDJD/Hoot#readme"
+  "homepage": "https://github.com/CoderDJD/Hoot#readme",
+  "dependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.3",
+    "typescript": "^4.2.4"
+  }
 }

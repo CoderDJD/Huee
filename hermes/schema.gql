@@ -1,0 +1,19 @@
+type Project {
+  id: ID
+  name: String
+  uname: String
+  email: String
+  online: boolean
+  imgUri: String
+  projects: Project[]
+}
+
+type User {
+  id: ID
+  name: String
+  uname: String
+  email: String
+  online: boolean
+  imgUri: String
+  projects: Project[]
+}

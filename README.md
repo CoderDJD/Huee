@@ -1,6 +1,6 @@
 <a href="https://hoot.vercel.app">
   <p align="center">
-    <img src="./assets/logo.png" width="128">
+    <img src="./.design-assets/logo.svg" width="128">
   </p>
 <a>
 <p align="center">
@@ -10,34 +10,18 @@
   <a href="https://discord.gg/ybTdpSApTQ">
     <img src="https://img.shields.io/discord/808703111174029364?color=Online&label=Discord&style=for-the-badge">
   </a>
+<img src="https://forthebadge.com/images/badges/made-with-typescript.svg" height="28px">
 </p>
-<h3 align="center">
-  <a href="https://github.com/CoderDJD/Hoot/blob/staging/CONTRIBUTING.md">Contribute</a>
-  <span> | </span>
-  <a href="https://discord.gg/ybTdpSApTQ">Community</a>
-  <span> | </span>
-  <a href="https://www.termsofservicegenerator.net/live.php?token=ncJ7hUXfgDM9UDva9rEWkeO6Ps6JQ6Ch">Terms of Service</a>
-  <span> | </span>
-  <a href="https://www.privacypolicies.com/live/0326131b-f979-4fc5-aa5e-d3d20e72aa10">Privacy Policy</a>
-</h3>
 
 ## Structure
 
-| Directory                             |             Description             |
-| :------------------------------------ | :---------------------------------: |
-| [/client](client)                     |           ReactTSX Client           |
-| [/client/src](client/src)             |             Actual TSX              |
-| [@/components](client/src/components) |       Components for App.tsx        |
-| [/@types](@types)                     | Types for the frontend and backend. |
-| [/server](server)                     |        Backend API / GraphQL        |
-| [/mobile](mobile)                     |          React Native App           |
-| [/assets](assets)                     |          All assets needed          |
-
-# Maintainers
-
-Contributors helping to review/merge PR's.
-
-- [@yomiAdenaike01](https://github.com/yomiAdenaike01/)<br>
+| Codebase                 |     Description      |
+| :----------------------- | :------------------: |
+| [hedwig](hedwig)         |   ReactTSX Client    |
+| [hermes](hermes)         |       User API       |
+| [errol](errol)           |     Chat Server      |
+| [pidwidgeon](pidwidgeon) | Webhooks and sockets |
+| [winky](winky)           |     Shenanigans      |
 
 # Contributing
 
@@ -51,3 +35,16 @@ Please read [CODE_OF_CONDUCT.md](https://github.com/CoderDJD/Hoot/blob/main/CODE
 # Attribution
 
 - Icon by [@Animadior](https://twitter.com/animadior)
+- Twemoji for emojis. Thanks Twitter!
+
+<h3 align="center">
+  <a href="https://github.com/CoderDJD/Hoot/blob/staging/CONTRIBUTING.md">Contribute</a>
+  <span> | </span>
+  <a href="https://discord.gg/ybTdpSApTQ">Community</a>
+</h3>
+
+<h3 align="center">
+  <a href="https://www.termsofservicegenerator.net/live.php?token=ncJ7hUXfgDM9UDva9rEWkeO6Ps6JQ6Ch">Terms of Service</a>
+  <span> | </span>
+  <a href="https://www.privacypolicies.com/live/0326131b-f979-4fc5-aa5e-d3d20e72aa10">Privacy Policy</a>
+</h3>
