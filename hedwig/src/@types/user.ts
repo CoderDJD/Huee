@@ -5,6 +5,6 @@ export interface User {
   uname: string;
   email: string;
   online: boolean;
-  img_uri: string;
+  imgUri: string;
   projects?: Project[];
 }

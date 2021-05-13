@@ -10,7 +10,7 @@
   <a href="https://discord.gg/ybTdpSApTQ">
     <img src="https://img.shields.io/discord/808703111174029364?color=Online&label=Discord&style=for-the-badge">
   </a>
-<img src="https://forthebadge.com/images/badges/made-with-typescript.svg" height="28px">
+  <img src="https://forthebadge.com/images/badges/made-with-typescript.svg" height="28px">
 </p>
 
 ## Structure

@@ -11,7 +11,7 @@ if (!firebase.apps.length)
   });
 
 export default firebase;
-export function onAuthStateChange(callback) {
+export function onAuthStateChange(callback: any) {
   return firebase.auth().onAuthStateChanged(user => {
     if (user) {
       callback({ user: user });

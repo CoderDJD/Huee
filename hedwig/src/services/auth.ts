@@ -1,5 +1,8 @@
 import firebase from "./firebase";
-export default async function socialMediaAuth(provider) {
+import { TwitterProvider, GithubProvider } from "./authProviders";
+export default async function socialMediaAuth(
+  provider: typeof GithubProvider | typeof TwitterProvider,
+) {
   return firebase
     .auth()
     .signInWithPopup(provider)
