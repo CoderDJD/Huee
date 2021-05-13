@@ -3,7 +3,6 @@ import { onAuthStateChange } from "./services/firebase";
 import { UserProvider } from "./userContext";
 const Auth = lazy(() => import("./auth"));
 const Home = lazy(() => import("./dash"));
-
 export default function App() {
   const [state, setState] = useState({ user: null });
   useEffect(() => {

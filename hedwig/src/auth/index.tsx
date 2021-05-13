@@ -5,7 +5,7 @@ import { TwitterProvider, GithubProvider } from "../services/authProviders";
 export default function Auth() {
   const handleOnClick = async (provider: any) => {
     const res = await socialMediaAuth(provider);
-    // Add server side logic things to store data about the user in the database.
+    console.log(res);
   };
   return (
     <div className="bg-gray-400 w-screen h-screen grid grid-cols-1 grid-rows-3 md:grid-cols-3 gap-4">
@@ -38,7 +38,7 @@ export default function Auth() {
             Log in with Github
           </button>
           <button
-            className="flex gap-2 items-center text-lg text-white bg-gray-200 font-body font-bold p-2 rounded-md bg-accent-default hover:bg-accent-hover focus:outline-none"
+            className="flex gap-2 items-center text-lg text-white font-body font-bold p-2 rounded-md bg-accent-default hover:bg-accent-hover focus:outline-none"
             onClick={() => {
               handleOnClick(TwitterProvider);
             }}>
