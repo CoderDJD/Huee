@@ -1,6 +1,9 @@
 import { Twitter, GitHub } from "react-feather";
-import socialMediaAuth from "../services/auth";
-import { TwitterProvider, GithubProvider } from "../services/authProviders";
+import {
+  TwitterProvider,
+  GithubProvider,
+  socialMediaAuth,
+} from "../../.firebase";
 
 export default function Auth() {
   const handleOnClick = async (provider: any) => {

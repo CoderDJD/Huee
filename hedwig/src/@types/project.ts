@@ -2,7 +2,7 @@ import { User } from "./user";
 export interface ProjectTeam {
   name: string;
   created_date: string;
-  participants: User[];
+  participants: [User];
   img_uri: string;
 }
 
@@ -16,7 +16,7 @@ export interface Project {
   // URI to the logo.
   banner: string;
   description: string;
-  teams: ProjectTeam[];
+  teams: [ProjectTeam];
   // Buy my coffee, !important
   bmcWebhook: string;
   // Youtube
@@ -25,6 +25,4 @@ export interface Project {
   twtrWebhook: string;
   completed: boolean;
   ownerId: User["id"];
-  videos: string[];
-  designs: string[];
 }

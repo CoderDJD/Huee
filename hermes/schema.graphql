@@ -1,0 +1,30 @@
+type Query(id: ) {
+  user: User
+}
+type Project {
+  id: ID
+  liveUrl: String
+  name: String
+  open: Boolean
+  description: String
+  teams: [ProjectTeam]
+  # Buy my coffee, !important
+  bmcWebhook: String
+  # Youtube
+  ytWebhook: String
+  # Twitter
+  twtrWebhook: String
+  completed: Boolean;
+  # Ref the User ID
+  ownerId: ID;
+}
+
+type User {
+  id: ID
+  name: String
+  uname: String
+  email: String
+  online: boolean
+  imgUri: String
+  projects: [Project]
+}

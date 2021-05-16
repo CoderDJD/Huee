@@ -1,8 +1,8 @@
 import { useState, useEffect, lazy, Suspense } from "react";
-import { onAuthStateChange } from "./services/firebase";
-import { UserProvider } from "./userContext";
-const Auth = lazy(() => import("./auth"));
-const Home = lazy(() => import("./dash"));
+import { onAuthStateChange } from "./.firebase";
+import { UserProvider } from "./contexts/auth";
+const Auth = lazy(() => import("./packages/auth"));
+const Home = lazy(() => import("./packages/dash"));
 export default function App() {
   const [state, setState] = useState({ user: null });
   useEffect(() => {
