@@ -3,7 +3,7 @@ module.exports = {
   darkMode: false,
   theme: {
     colors: {
-      white: "#ffffff",
+      white: "#f5f5f5",
       accent: {
         default: "#f05454",
         hover: "#f26979",

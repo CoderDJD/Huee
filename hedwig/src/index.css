@@ -1,28 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .font-body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
 }
 .font-main {
-  font-family: "Monsterrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 .font-bold {
   font-weight: 700;
 }
 h1 {
-  @apply text-4xl text-white font-sans font-bold;
+  @apply text-4xl text-white font-main font-bold;
 }
 h2 {
-  @apply text-3xl text-white font-sans font-bold;
+  @apply text-3xl text-white font-main font-bold;
 }
 h3 {
-  @apply text-2xl text-white font-sans font-bold;
+  @apply text-2xl text-white font-main font-bold;
 }
 h4 {
-  @apply text-xl text-white font-sans font-bold;
+  @apply text-xl text-white font-main font-bold;
 }
 p {
   @apply text-lg text-gray-100 font-body;
@@ -31,5 +32,5 @@ p.small {
   @apply text-base text-gray-100 font-body;
 }
 div.tooltip {
-  @apply text-base text-white bg-gray-200 font-sans font-bold p-1 w-max rounded-lg;
+  @apply text-base text-white bg-gray-200 font-main font-bold p-1 w-max rounded-lg;
 }
