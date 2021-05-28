@@ -1,6 +1,7 @@
 import PropTypes, { InferProps } from "prop-types";
 export default function Avatar({
   imgUrl,
+  notify,
 }: InferProps<typeof Avatar.propTypes>) {
   return (
     <div
@@ -15,7 +16,9 @@ export default function Avatar({
         className="rounded-full w-full h-full object-cover"
       />
       <span
-        className="rounded-full absolute box-content bg-accent-default border-gray-300"
+        className={` ${
+          notify === true ? `absolute` : `hidden`
+        } rounded-full box-content bg-accent-default border-dark-300`}
         style={{
           width: "6px",
           height: "6px",
@@ -29,8 +32,10 @@ export default function Avatar({
 
 Avatar.propTypes = {
   imgUrl: PropTypes.string,
+  notify: PropTypes.bool,
 };
 
 Avatar.defaultProps = {
   imgUrl: "https://twemoji.maxcdn.com/v/13.0.2/72x72/1f47d.png",
+  notify: false,
 };

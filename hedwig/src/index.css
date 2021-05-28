@@ -1,7 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 .font-body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
@@ -14,23 +19,23 @@
   font-weight: 700;
 }
 h1 {
-  @apply text-4xl text-white font-main font-bold;
-}
-h2 {
   @apply text-3xl text-white font-main font-bold;
 }
-h3 {
+h2 {
   @apply text-2xl text-white font-main font-bold;
 }
-h4 {
+h3 {
   @apply text-xl text-white font-main font-bold;
 }
+h4 {
+  @apply text-sm text-white font-main font-bold;
+}
 p {
-  @apply text-lg text-gray-100 font-body;
+  @apply text-base text-dark-100 font-body;
 }
 p.small {
-  @apply text-base text-gray-100 font-body;
+  @apply text-sm text-dark-100 font-body;
 }
 div.tooltip {
-  @apply text-base text-white bg-gray-200 font-main font-bold p-1 w-max rounded-lg;
+  @apply text-base text-white bg-dark-200 font-main font-bold p-1 w-max rounded-lg;
 }

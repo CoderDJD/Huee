@@ -1,26 +1,45 @@
 type Query {
   user(email: String!): User
+  project(id: String!): Project
+  userProject(ownerId: String!): Project
 }
 
 type User {
   id: ID
   name: String!
   uname: String!
-  email: String!
+  email: String
   online: boolean!
-  imgUri: String!
+  photoURL: String!
+  twitter: String
+  youtube: String
+  projects: [Project]!
+}
+
+type Member {
+  name: String!
+  uname: String!
+  online: boolean!
 }
 
 type Project {
   id: ID
-  liveUrl: String
-  name: String!
-  open: Boolean!
-  description: String!
-  bmcWebhook: String
-  ytWebhook: String
-  twtrWebhook: String
-  completed: Boolean
+  serverId: ID
   ownerId: ID
-  allowPeople: ID
+  twitter: String
+  youtube: String
+  bmc: String
+  applicationUrl: String
+  name: String!
+  description: String!
+  ytWebhook: String
+  bmcWebhook: String
+  twtrWebhook: String
+  people: [Member!]!
+  peopleNum: Int!
+  open: Boolean!
+}
+
+type Server {
+
 }

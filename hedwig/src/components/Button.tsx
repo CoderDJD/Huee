@@ -5,7 +5,7 @@ export default function Button({
 }: InferProps<typeof Button.propTypes>) {
   return (
     <button
-      className="flex gap-2 items-center text-lg text-white font-bold font-body p-2 rounded-md bg-accent-default hover:bg-accent-hover focus:outline-none w-max"
+      className="flex gap-2 items-center text-md text-white font-bold font-body p-2 rounded-md bg-accent-default hover:bg-accent-hover focus:outline-none focus:ring w-max"
       onClick={clickHandler}>
       {children}
     </button>
