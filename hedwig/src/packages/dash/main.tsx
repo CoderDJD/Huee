@@ -1,6 +1,6 @@
 import { Plus } from "react-feather";
 import Button from "../../components/Button";
-import ProjectUnit from "../components/ProjectUnit";
+import ProjectUnit from "../../components/ProjectUnit";
 
 export default function Main() {
   return (

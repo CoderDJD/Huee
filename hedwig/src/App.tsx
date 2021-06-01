@@ -1,7 +1,7 @@
 import { UserProvider } from "./util/AuthContext";
 import { Route, useHistory } from "react-router-dom";
 import { onAuthStateChange } from "./services/firebase";
-import Navigator from "./packages/util/Navigator";
+import Navigator from "./util/Navigator";
 import { useState, useEffect, lazy, Suspense } from "react";
 const Auth = lazy(() => import("./packages/auth"));
 const Home = lazy(() => import("./packages/dash"));

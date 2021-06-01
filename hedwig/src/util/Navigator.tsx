@@ -1,6 +1,6 @@
 import NavigationUnit from "../components/NavigationUnit";
-import Home from "../../assets/home";
-import Notf from "../../assets/notifications";
+import Home from "../assets/home";
+import Notf from "../assets/notifications";
 const tabs = [
   { route: "/dash", icon: <Home /> },
   { route: "/projects", icon: <Notf /> },

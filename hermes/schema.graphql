@@ -5,12 +5,13 @@ type Query {
 }
 
 type User {
-  id: ID
-  name: String!
+  id: ID!
+  bio: String
   uname: String!
-  email: String
   online: boolean!
-  photoURL: String!
+  avatar: String!
+  email: String
+  github: String
   twitter: String
   youtube: String
   projects: [Project]!
@@ -19,13 +20,15 @@ type User {
 type Member {
   name: String!
   uname: String!
+  bio: String
   online: boolean!
 }
 
 type Project {
-  id: ID
-  serverId: ID
-  ownerId: ID
+  id: ID!
+  serverId: ID!
+  ownerId: ID!
+  github: String
   twitter: String
   youtube: String
   bmc: String
@@ -38,8 +41,4 @@ type Project {
   people: [Member!]!
   peopleNum: Int!
   open: Boolean!
-}
-
-type Server {
-
 }

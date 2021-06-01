@@ -1,4 +1,4 @@
-import NotificationUnit from "../components/NotificationUnit";
+import NotificationUnit from "../../components/NotificationUnit";
 
 export default function Main() {
   return (

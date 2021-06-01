@@ -1,7 +1,6 @@
 {
-  "name": "@hoot/client",
+  "name": "@hoot/hedwig",
   "author": "Joshua Daniel D",
-  "version": "0.2.0",
   "dependencies": {
     "@apollo/client": "^3.3.16",
     "firebase": "^8.4.3",

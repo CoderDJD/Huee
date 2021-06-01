@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Search } from "react-feather";
-import Avatar from "../../components/Avatar";
-import { UserContext } from "../../util/AuthContext";
+import Avatar from "../components/Avatar";
+import { UserContext } from "../util/AuthContext";
 
 export default function Toolbar() {
   const user = useContext(UserContext).user;

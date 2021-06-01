@@ -5,7 +5,7 @@ import {
 } from "../../services/firebase";
 import { Twitter, GitHub } from "react-feather";
 import { useHistory } from "react-router-dom";
-import AuthButton from "./components/AuthButton";
+import AuthButton from "../../components/AuthButton";
 
 export default function Auth() {
   const history = useHistory();
