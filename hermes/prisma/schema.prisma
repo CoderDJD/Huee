@@ -1,0 +1,50 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  bio      String
+  name     String
+  uname    String    @unique
+  online   Boolean
+  avatar   String
+  email    String    @unique
+  github   String
+  twitter  String
+  youtube  String
+  projects Project[]
+}
+
+model Project {
+  id             Int      @id @default(autoincrement())
+  user           User?    @relation(fields: [userId], references: [id])
+  userId         Int
+  github         String
+  twitter        String
+  youtube        String
+  bmc            String
+  applicationUrl String
+  name           String
+  description    String
+  ytWebhook      String
+  bmcWebhook     String
+  twtrWebhook    String
+  people         Member[]
+  peopleNum      Int
+  open           Boolean
+}
+
+model Member {
+  name      String
+  uname     String   @unique
+  bio       String
+  online    Boolean
+  Project   Project? @relation(fields: [projectId], references: [id])
+  projectId Int?
+}

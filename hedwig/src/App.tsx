@@ -5,7 +5,7 @@ import Navigator from "./util/Navigator";
 import { useState, useEffect, lazy, Suspense } from "react";
 const Auth = lazy(() => import("./packages/auth"));
 const Home = lazy(() => import("./packages/dash"));
-const Project = lazy(() => import("./packages/project"));
+const Project = lazy(() => import("./packages/notf"));
 
 export default function App() {
   const [state, setState] = useState({ user: null });

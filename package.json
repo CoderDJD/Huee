@@ -3,16 +3,14 @@
   "workspaces": {
     "packages": [
       "hedwig",
-      "hermes",
-      "errol"
+      "errol",
+      "hermes"
     ]
   },
   "private": true,
   "devDependencies": {
     "commitizen": "^4.2.3",
-    "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.25.0",
-    "eslint-plugin-react": "^7.23.2"
+    "cz-conventional-changelog": "^3.2.0"
   },
   "config": {
     "commitizen": {
@@ -33,8 +31,5 @@
   },
   "license": "MIT",
   "bugs": "https://github.com/CoderDJD/Hoot/issues",
-  "homepage": "https://github.com/CoderDJD/Hoot#readme",
-  "dependencies": {
-    "ts-node": "^10.0.0"
-  }
+  "homepage": "https://github.com/CoderDJD/Hoot#readme"
 }

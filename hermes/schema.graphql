@@ -8,7 +8,7 @@ type User {
   id: ID!
   bio: String
   uname: String!
-  online: boolean!
+  online: Boolean!
   avatar: String!
   email: String
   github: String
@@ -21,7 +21,7 @@ type Member {
   name: String!
   uname: String!
   bio: String
-  online: boolean!
+  online: Boolean!
 }
 
 type Project {
