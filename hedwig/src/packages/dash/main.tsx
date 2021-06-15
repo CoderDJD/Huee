@@ -1,6 +1,5 @@
-import { Plus } from "react-feather";
-import Button from "../../components/Button";
 import ProjectUnit from "../../components/ProjectUnit";
+import NotificationUnit from "../../components/NotificationUnit";
 
 export default function Main() {
   return (
@@ -11,38 +10,43 @@ export default function Main() {
             className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
             style={{ top: "0px" }}>
             <div className="flex justify-between items-center mb-5">
-              <h3>Projects for you</h3>
-              <Button>
-                <article className="flex items-center justify-center gap-2">
-                  <Plus className="w-auto h-4" />
-                  <span className="text-xs">New Project</span>
-                </article>
-              </Button>
+              <h3>Your Feed</h3>
             </div>
           </div>
           {/* Feed starts */}
           <div className="flex flex-col flex-1 mb-8">
             <div className="flex flex-col space-y-4">
-              <ProjectUnit
-                name="Hoot"
-                liveUrl="https://hoot.vercel.app/"
-                description="We help developers gain contributors for thier open source projects. We provide a platform through which we think you can finish your projects easier, and faster."
-              />
-              <ProjectUnit
-                name="Hoot"
-                liveUrl="https://hoot.vercel.app/"
-                description="We help developers gain contributors for thier open source projects. We provide a platform through which we think you can finish your projects easier, and faster."
-              />
-              <ProjectUnit
-                name="Hoot"
-                liveUrl="https://hoot.vercel.app/"
-                description="We help developers gain contributors for thier open source projects. We provide a platform through which we think you can finish your projects easier, and faster."
-              />
-              <ProjectUnit
-                name="Hoot"
-                liveUrl="https://hoot.vercel.app/"
-                description="We help developers gain contributors for thier open source projects. We provide a platform through which we think you can finish your projects easier, and faster."
-              />
+              <div className="space-y-2">
+                <h4>Notifications</h4>
+                <NotificationUnit
+                  plat="gh"
+                  project="Hoot"
+                  content="Issue #9 closed with pull request #66"
+                />
+                <NotificationUnit
+                  plat="in-ch"
+                  project="Tesla"
+                  content="Elon Musk sent a message."
+                />
+                <NotificationUnit
+                  plat="in-ta"
+                  project="Dogehouse"
+                  content="Ben Awad alloted you #2866"
+                />
+              </div>
+              <div className="space-y-2">
+                <h4>Projects</h4>
+                <ProjectUnit
+                  name="Tesla"
+                  liveUrl="https://tesla.com/"
+                  description="Here to accelerate the world’s transition to sustainable energy."
+                />
+                <ProjectUnit
+                  name="Dogehouse"
+                  liveUrl="https://dogehouse.tv/"
+                  description="Taking voice conversations to the moon. Written in the refined hypebeast stack."
+                />
+              </div>
             </div>
           </div>
         </div>

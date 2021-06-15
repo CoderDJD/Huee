@@ -1,6 +1,6 @@
 <a href="https://hoot.vercel.app">
   <p align="center">
-    <img src="./.design-assets/logo.svg" width="128">
+    <img src="./hedwig/src/assets/logo.svg" width="128">
   </p>
 <a>
 <p align="center">

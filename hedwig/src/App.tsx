@@ -5,7 +5,8 @@ import Navigator from "./util/Navigator";
 import { useState, useEffect, lazy, Suspense } from "react";
 const Auth = lazy(() => import("./packages/auth"));
 const Home = lazy(() => import("./packages/dash"));
-const Project = lazy(() => import("./packages/notf"));
+const Notf = lazy(() => import("./packages/notf"));
+const Proj = lazy(() => import("./packages/proj"));
 
 export default function App() {
   const [state, setState] = useState({ user: null });
@@ -24,8 +25,9 @@ export default function App() {
           <Suspense
             fallback={<div className="bg-dark-400 w-screen h-screen"></div>}>
             <Route component={Home} path="/dash" />
-            <Route component={Project} path="/projects" />
-            <Navigator></Navigator>
+            <Route component={Notf} path="/notf" />
+            <Route component={Proj} path="/proj" />
+            <Navigator />
           </Suspense>
         ) : (
           <Suspense

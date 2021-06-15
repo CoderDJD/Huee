@@ -2,6 +2,7 @@ import PropTypes, { InferProps } from "prop-types";
 export default function Avatar({
   imgUrl,
   notify,
+  onClick,
 }: InferProps<typeof Avatar.propTypes>) {
   return (
     <div
@@ -9,7 +10,8 @@ export default function Avatar({
       style={{
         width: "30px",
         height: "30px",
-      }}>
+      }}
+      onClick={onClick}>
       <img
         src={imgUrl}
         alt="your-dp"
@@ -25,7 +27,8 @@ export default function Avatar({
           right: "1px",
           bottom: "-1px",
           borderWidth: "1px",
-        }}></span>
+        }}
+      />
     </div>
   );
 }
@@ -33,6 +36,7 @@ export default function Avatar({
 Avatar.propTypes = {
   imgUrl: PropTypes.string,
   notify: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 Avatar.defaultProps = {
