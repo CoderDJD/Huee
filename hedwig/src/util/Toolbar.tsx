@@ -1,10 +1,11 @@
 import Project from "../assets/projects";
 import Avatar from "../components/Avatar";
 import { useContext, useState } from "react";
+import { logOut } from "../services/firebase";
 import { UserContext } from "../util/AuthContext";
 import ModalButton from "../components/ModalButton";
 import { Fade, Modal, Backdrop } from "@material-ui/core";
-import { Search, Settings, Bell, GitHub } from "react-feather";
+import { Search, Settings, Bell, GitHub, LogOut } from "react-feather";
 
 export default function Toolbar() {
   const user = useContext(UserContext).user;
@@ -52,6 +53,14 @@ export default function Toolbar() {
                   Icon={<Project width={22} height={22} fill="#10B981" />}
                   Text="Projects"
                   Route="/proj"
+                />
+                <ModalButton
+                  Icon={<LogOut className="text-blue-500" />}
+                  Text="Log Out"
+                  Route="/"
+                  onClick={() => {
+                    logOut();
+                  }}
                 />
               </div>
               <article className="flex space-x-4 justify-center justify-items-center">

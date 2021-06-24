@@ -25,8 +25,8 @@ export default function Main() {
                 />
                 <NotificationUnit
                   plat="in-ch"
-                  project="Tesla"
-                  content="Elon Musk sent a message."
+                  project="Hoot"
+                  content="Evan You sent you a message."
                 />
                 <NotificationUnit
                   plat="in-ta"

@@ -30,5 +30,5 @@ ProjectUnit.defaultProps = {
   liveUrl: "https://hoot.vercel.app/",
   name: "Hoot",
   description:
-    "We help developers gain contributors for thier open source projects. We provide a platform through which we think you can finish your projects easier, and faster.",
+    "We help developers gain contributors for their open source projects. We provide a platform through which we think you can finish your projects easier, and faster.",
 };

@@ -3,8 +3,8 @@ import {
   GithubProvider,
   socialMediaAuth,
 } from "../../services/firebase";
-import { Twitter, GitHub } from "react-feather";
 import { useHistory } from "react-router-dom";
+import { Twitter, GitHub } from "react-feather";
 import AuthButton from "../../components/AuthButton";
 
 export default function Auth() {
