@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Settings } from "react-feather";
 import Button from "../../components/Button";
 import SettText from "../../components/SettText";
 import SettInput from "../../components/SettInput";
@@ -19,7 +20,8 @@ export default function Main() {
           <div
             className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
             style={{ top: "0px" }}>
-            <div className="flex justify-between items-center mb-5">
+            <div className="flex justify-left items-center mb-5 space-x-2">
+              <Settings className="text-yellow-500" />
               <h3>Settings</h3>
             </div>
           </div>

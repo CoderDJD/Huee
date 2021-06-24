@@ -10,7 +10,7 @@ export default function Main() {
             className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
             style={{ top: "0px" }}>
             <div className="flex justify-between items-center mb-5">
-              <h3>Your Feed</h3>
+              <h3>Welcome Home 🙏🏡</h3>
             </div>
           </div>
           {/* Feed starts */}

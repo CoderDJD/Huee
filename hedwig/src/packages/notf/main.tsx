@@ -1,3 +1,4 @@
+import { Bell } from "react-feather";
 import NotificationUnit from "../../components/NotificationUnit";
 
 export default function Main() {
@@ -8,7 +9,8 @@ export default function Main() {
           <div
             className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
             style={{ top: "0px" }}>
-            <div className="flex justify-between items-center mb-5">
+            <div className="flex justify-left items-center mb-5 space-x-2">
+              <Bell className="text-accent-default" />
               <h3>Recent Activity</h3>
             </div>
             <div className="flex flex-col flex-1 mb-8">
