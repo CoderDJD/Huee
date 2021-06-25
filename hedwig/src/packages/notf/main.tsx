@@ -23,7 +23,7 @@ export default function Main() {
                 <NotificationUnit
                   plat="tw"
                   project="Hoot"
-                  content="Hey Twitter! We help devs find ontributors for their open source projects."
+                  content="Hey Twitter! We help devs find contributors for their open source projects."
                 />
                 <NotificationUnit
                   plat="bmc"
