@@ -3,6 +3,7 @@
   "workspaces": {
     "packages": [
       "hedwig",
+      "migr",
       "errol",
       "hermes"
     ]

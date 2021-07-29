@@ -15,7 +15,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   },
-  "include": ["src", "src/services"]
+  "include": [
+    "src",
+    "services",
+    "assets",
+    "components",
+    "util",
+    "dash.tsx",
+    "pages/auth.tsx"
+  ],
+  "exclude": ["node_modules"]
 }

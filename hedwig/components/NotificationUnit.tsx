@@ -7,15 +7,18 @@ import {
 } from "react-feather";
 import { Gestures } from "react-gesture-handler";
 import PropTypes, { InferProps } from "prop-types";
-// import { useSpring, animated } from "react-spring";
 
 export default function NotificationUnit({
-  type,
   plat,
   project,
   content,
 }: InferProps<typeof NotificationUnit.propTypes>) {
-  const handleGesture = (event: HammerInput) => console.log(event);
+  const handleGesture = (event: HammerInput) => {
+    if (event.type === "swiperight")
+      console.log("You deleted this notification");
+    if (event.type === "swipeleft")
+      console.log("You opened the particular project.");
+  };
   return (
     <div className="flex flex-col w-full p-2 rounded-sm bg-dark-500 shadow-md border-dark-300 hover:bg-dark-300">
       <Gestures

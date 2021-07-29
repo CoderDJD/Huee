@@ -2,7 +2,7 @@ import Project from "../assets/projects";
 import Avatar from "../components/Avatar";
 import { useContext, useState } from "react";
 import { logOut } from "../services/firebase";
-import { UserContext } from "../util/AuthContext";
+import { UserContext } from "./AuthContext";
 import ModalButton from "../components/ModalButton";
 import { Fade, Modal, Backdrop } from "@material-ui/core";
 import { Search, Settings, Bell, GitHub, LogOut } from "react-feather";
