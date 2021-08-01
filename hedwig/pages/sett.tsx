@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { Settings } from "react-feather";
-import Toolbar from "../../util/Toolbar";
-import Button from "../../components/Button";
-import SettText from "../../components/SettText";
-import SettInput from "../../components/SettInput";
+import Toolbar from "../util/Toolbar";
+import Button from "../components/Button";
+import SettText from "../components/SettText";
+import SettInput from "../components/SettInput";
 
 export default function Sett() {
   const [bio, setBio] = useState("");

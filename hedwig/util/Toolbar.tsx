@@ -1,14 +1,11 @@
-import Project from "../assets/projects";
+import { useState } from "react";
+import Project from "../public/projects";
 import Avatar from "../components/Avatar";
-import { useContext, useState } from "react";
-import { logOut } from "../services/firebase";
-import { UserContext } from "./AuthContext";
 import ModalButton from "../components/ModalButton";
 import { Fade, Modal, Backdrop } from "@material-ui/core";
 import { Search, Settings, Bell, GitHub, LogOut } from "react-feather";
 
 export default function Toolbar() {
-  const user = useContext(UserContext).user;
   const [mshow, setShow] = useState(false);
   return (
     <div
@@ -16,7 +13,9 @@ export default function Toolbar() {
       style={{ marginTop: 10 }}>
       <button className="focus:outline-none">
         <Avatar
-          imgUrl={user.photoURL}
+          imgUrl={
+            "https://avatars.githubusercontent.com/u/70089411?s=400&u=8753d76752a6dd95972cc87d2b186c8794fe9dfe&v=4"
+          }
           onClick={() => {
             setShow(true);
           }}
@@ -59,7 +58,7 @@ export default function Toolbar() {
                   Text="Log Out"
                   Route="/"
                   onClick={() => {
-                    logOut();
+                    // logOut();
                   }}
                 />
               </div>

@@ -1,6 +1,6 @@
-import Toolbar from "../../util/Toolbar";
-import Project from "../../assets/projects";
-import ProjectUnit from "../../components/ProjectUnit";
+import Toolbar from "../util/Toolbar";
+import Project from "../public/projects";
+import ProjectUnit from "../components/ProjectUnit";
 
 export default function Proj() {
   return (

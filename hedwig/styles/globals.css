@@ -1,13 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-gradient {
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
 .font-body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;

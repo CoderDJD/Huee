@@ -1,8 +1,8 @@
 import { Bell } from "react-feather";
-import Toolbar from "../../util/Toolbar";
-import NotificationUnit from "../../components/NotificationUnit";
+import Toolbar from "../util/Toolbar";
+import NotificationUnit from "../components/NotificationUnit";
 
-export default function Project() {
+export default function Notifications() {
   return (
     <div className="bg-dark-400 w-screen h-screen flex flex-col">
       <Toolbar />

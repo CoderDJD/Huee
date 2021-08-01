@@ -1,6 +1,6 @@
 import NavigationUnit from "../components/NavigationUnit";
-import Proj from "../assets/projects";
-import Home from "../assets/home";
+import Proj from "../pages/proj";
+import Home from "../public/home";
 
 const tabs = [
   { route: "/dash", icon: <Home /> },

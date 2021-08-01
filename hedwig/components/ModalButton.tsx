@@ -1,6 +1,5 @@
 import { Circle } from "react-feather";
 import PropTypes, { InferProps } from "prop-types";
-import { useHistory } from "react-router";
 
 export default function ModalButton({
   Icon,
@@ -8,13 +7,12 @@ export default function ModalButton({
   Route,
   onClick,
 }: InferProps<typeof ModalButton.propTypes>) {
-  const history = useHistory();
   return (
     <div
       className="flex space-x-2 bg-dark-300 rounded-sm p-2 items-center hover:shadow-lg hover:bg-dark-200"
       onClick={() => {
         onClick();
-        history.push(Route);
+        window.location.replace(Route);
       }}>
       {Icon}
       <h3>{Text}</h3>

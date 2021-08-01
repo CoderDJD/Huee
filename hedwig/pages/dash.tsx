@@ -1,12 +1,12 @@
-import Toolbar from "./util/Toolbar";
-import ProjectUnit from "./components/ProjectUnit";
-import NotificationUnit from "./components/NotificationUnit";
+import Toolbar from "../util/Toolbar";
+import ProjectUnit from "../components/ProjectUnit";
+import NotificationUnit from "../components/NotificationUnit";
 
 export default function Dash() {
   return (
     <div className="bg-dark-400 w-screen h-screen flex flex-col">
       <Toolbar />
-      <div className="flex flex-col items-center w-full scrollbar-thin scrollbar-thumb-accent-disabled scrollbar-thumb-rounded-lg mb-7">
+      <div className="flex flex-col items-center w-full scrollbar-thin scrollbar-thumb-accent-hover scrollbar-thumb-rounded-md mb-7">
         <article className="relative w-full px-3">
           <div className="flex flex-col flex-1 w-full">
             <div
