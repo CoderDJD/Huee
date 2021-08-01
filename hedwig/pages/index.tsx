@@ -73,26 +73,27 @@ export default function Home() {
               <h2 className="text-xl">Cross Platform</h2>
               <p>
                 Responsive, for all the storagephiles out there, with default
-                dark theme, so that we're light on your eyes. PWA available, and
-                apps on the app store and play store.
+                dark theme, so that we&apos;re light on your eyes. PWA
+                available, and apps on the app store and play store.
               </p>
             </div>
             <div className="flex flex-col items-center justify-center p-1.5 space-y-2 md:cols-start-2">
               <ThumbsDown className="text-indigo-500" />
               <h2 className="text-xl">No Ads</h2>
               <p>
-                Elon took traffic, so we're going no ads, as they are the most
-                soul destroying thing after "Big T". We appreciate your
-                contributions on GitHub, and just even using the app.
+                Elon took traffic, so we&apos;re going no ads, as they are the
+                most soul destroying thing after &quot;Big T&quot;. We
+                appreciate your contributions on GitHub, and just even using the
+                app.
               </p>
             </div>
             <div className="flex flex-col items-center justify-center p-1.5 space-y-2 md:cols-start-3">
               <Slash className="text-blue-500" />
-              <h2 className="text-xl">You're private</h2>
+              <h2 className="text-xl">You&apos;re private</h2>
               <p>
                 We respect your privacy, and you can trust that none of your
-                data is ever selled to any person, and we don't serve ads too.
-                We're also open source, so you can check our code out.
+                data is ever selled to any person, and we don&quot;t serve ads
+                too. We&apos;re also open source, so you can check our code out.
               </p>
             </div>
           </div>

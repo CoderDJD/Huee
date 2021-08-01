@@ -40,8 +40,12 @@
   },
   "eslintConfig": {
     "extends": [
-      "next"
-    ]
+      "next",
+      "prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-variables": "off"
+    }
   },
   "browserslist": {
     "production": [
