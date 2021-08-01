@@ -1,3 +1,4 @@
+import React from "react";
 import { Circle } from "react-feather";
 import Link from "next/link";
 import PropTypes, { InferProps } from "prop-types";

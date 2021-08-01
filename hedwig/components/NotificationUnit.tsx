@@ -5,6 +5,7 @@ import {
   MessageSquare,
   BarChart2,
 } from "react-feather";
+import React from "react";
 import PropTypes, { InferProps } from "prop-types";
 
 export default function NotificationUnit({

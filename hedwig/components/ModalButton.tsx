@@ -1,5 +1,6 @@
 import { Circle } from "react-feather";
 import PropTypes, { InferProps } from "prop-types";
+import React from "react";
 
 export default function ModalButton({
   Icon,

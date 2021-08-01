@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes, { InferProps } from "prop-types";
 export default function Avatar({
   imgUrl,
@@ -19,7 +20,7 @@ export default function Avatar({
       />
       <span
         className={` ${
-          notify === true ? `absolute` : `hidden`
+          notify === true ? "absolute" : "hidden"
         } rounded-full box-content bg-accent-default border-dark-300`}
         style={{
           width: "6px",

@@ -1,6 +1,7 @@
 import { Bell } from "react-feather";
 import Toolbar from "../util/Toolbar";
 import NotificationUnit from "../components/NotificationUnit";
+import React from "react";
 
 export default function Notifications() {
   return (

@@ -1,4 +1,6 @@
+import React from "react";
 import PropTypes, { InferProps } from "prop-types";
+
 export default function Button({
   children,
   clickHandler,

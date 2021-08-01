@@ -1,3 +1,4 @@
+import React from "react";
 import { GitHub } from "react-feather";
 import Image from "next/image";
 import AuthButton from "../components/AuthButton";
