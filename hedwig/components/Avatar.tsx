@@ -16,7 +16,7 @@ export default function Avatar({
       <img
         src={imgUrl}
         alt="your-dp"
-        className="rounded-full w-full h-full object-cover"
+        className="rounded-full w-full h-full object-cover border-2 border-accent-default"
       />
       <span
         className={` ${

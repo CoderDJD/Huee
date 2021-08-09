@@ -1,7 +1,9 @@
 import { Bell } from "react-feather";
-import Toolbar from "../util/Toolbar";
+import Toolbar from "../components/Toolbar";
 import NotificationUnit from "../components/NotificationUnit";
+import Navigator from "../components/Navigator";
 import React from "react";
+import Twemoji from "../components/Twemoji";
 
 export default function Notifications() {
   return (
@@ -15,7 +17,9 @@ export default function Notifications() {
               style={{ top: "0px" }}>
               <div className="flex justify-left items-center mb-5 space-x-2">
                 <Bell className="text-accent-default" />
-                <h3>Recent Activity</h3>
+                <h3>
+                  notifications <Twemoji emoji="🚨" />
+                </h3>
               </div>
               <div className="flex flex-col flex-1 mb-8">
                 <div className="flex flex-col space-y-4">
@@ -39,6 +43,7 @@ export default function Notifications() {
             </div>
           </div>
         </article>
+        <Navigator />
       </div>
     </div>
   );

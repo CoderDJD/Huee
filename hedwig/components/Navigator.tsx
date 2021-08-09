@@ -1,10 +1,13 @@
-import NavigationUnit from "../components/NavigationUnit";
-import Proj from "../pages/proj";
+import React from "react";
+import Proj from "../public/projects";
 import Home from "../public/home";
+import NavigationUnit from "./NavigationUnit";
+import { Bell } from "react-feather";
 
 const tabs = [
   { route: "/dash", icon: <Home /> },
   { route: "/proj", icon: <Proj /> },
+  { route: "/notf", icon: <Bell className="text-accent-default" /> },
 ];
 
 export default function Navigator() {

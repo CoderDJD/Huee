@@ -1,6 +1,6 @@
 import React from "react";
+import Google from "../public/google";
 import { GitHub } from "react-feather";
-import Image from "next/image";
 import AuthButton from "../components/AuthButton";
 
 export default function Auth() {
@@ -26,12 +26,8 @@ export default function Auth() {
           </p>
         </div>
         <div className="space-y-4">
-          <AuthButton onClick={() => {}} pStr="GitHub" Icon={<GitHub />} />
-          <AuthButton
-            onClick={() => {}}
-            pStr="Google"
-            Icon={<Image src="/google.svg" width={24} height={24} />}
-          />
+          <AuthButton pStr="GitHub" Icon={<GitHub />} />
+          <AuthButton pStr="Google" Icon={<Google />} />
         </div>
       </div>
     </div>

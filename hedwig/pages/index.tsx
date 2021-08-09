@@ -53,7 +53,7 @@ export default function Home() {
             clickHandler={() => {
               window.location.replace("https://forms.gle/ocexeo6dnkbbWVYM6");
             }}>
-            GET STARTED
+            Get Started
           </Button>
         </div>
         <div className="bg-gray-800 rounded-md p-5 mt-10">
@@ -103,19 +103,6 @@ export default function Home() {
         <section className="flex space-x-2">
           <Image src="/logo.svg" width={32} height={32} />
           <h1>Hoot</h1>
-        </section>
-        <section className="flex space-x-2 items-center justify-center p-1.5">
-          <a href="https://github.com/CoderDJD/Hoot" className="text-white">
-            <h3>GitHub</h3>
-          </a>
-          <h4>|</h4>
-          <a href="https://discord.gg/z33ySCHGHK" className="text-white">
-            <h3>Discord</h3>
-          </a>
-          <h4>|</h4>
-          <a href="https://twitter.com/CoderDJD" className="text-white">
-            <h3>Twitter(Dev)</h3>
-          </a>
         </section>
         <section className="flex space-x-4 items-center justify-between p-1.5">
           <a href="https://github.com/CoderDJD/Hoot/">

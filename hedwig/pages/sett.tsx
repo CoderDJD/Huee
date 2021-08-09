@@ -2,9 +2,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Settings } from "react-feather";
-import Toolbar from "../util/Toolbar";
+import Toolbar from "../components/Toolbar";
 import Button from "../components/Button";
 import SettText from "../components/SettText";
+import Navigator from "../components/Navigator";
 import SettInput from "../components/SettInput";
 
 export default function Sett() {
@@ -26,8 +27,8 @@ export default function Sett() {
               className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
               style={{ top: "0px" }}>
               <div className="flex justify-left items-center mb-5 space-x-2">
-                <Settings className="text-yellow-500" />
-                <h3>Settings</h3>
+                <Settings className="text-accent-default" />
+                <h3>settings</h3>
               </div>
             </div>
 
@@ -38,7 +39,7 @@ export default function Sett() {
                   callback={e => setUname(e.target.value)}
                 />
                 <SettInput
-                  text="Display Name"
+                  text="name"
                   callback={e => setDname(e.target.value)}
                 />
                 <SettInput
@@ -65,6 +66,7 @@ export default function Sett() {
             </div>
           </div>
         </article>
+        <Navigator />
       </div>
     </div>
   );

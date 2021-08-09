@@ -1,9 +1,9 @@
-import { useState } from "react";
-import Project from "../public/projects";
-import Avatar from "../components/Avatar";
-import ModalButton from "../components/ModalButton";
+import Avatar from "./Avatar";
+import ModalButton from "./ModalButton";
+import React, { useState } from "react";
 import { Fade, Modal, Backdrop } from "@material-ui/core";
-import { Search, Settings, Bell, GitHub, LogOut } from "react-feather";
+import { Search, Settings, GitHub, LogOut } from "react-feather";
+import Twemoji from "./Twemoji";
 
 export default function Toolbar() {
   const [mshow, setShow] = useState(false);
@@ -16,6 +16,7 @@ export default function Toolbar() {
           imgUrl={
             "https://avatars.githubusercontent.com/u/70089411?s=400&u=8753d76752a6dd95972cc87d2b186c8794fe9dfe&v=4"
           }
+          notify={true}
           onClick={() => {
             setShow(true);
           }}
@@ -32,30 +33,22 @@ export default function Toolbar() {
           }}
           className="flex items-center justify-center justify-items-center">
           <Fade in={mshow}>
-            <div className="bg-dark-500 rounded-md p-3 w-9/12 h-4/6 space-y-2 flex flex-col items-center justify-center justify-items-center">
+            <div className="bg-dark-500 rounded-md p-3 w-9/12 h-4/6 space-y-2 flex flex-col items-center justify-between">
               <article>
-                <h3>Hey 👋</h3>
-                <p>Where do you want to go?</p>
+                <h3>
+                  helloooo <Twemoji emoji="👋" />
+                </h3>
+                <p>where dya wanna go?</p>
               </article>
               <div className="bg-dark-400 p-3 rounded-md space-y-4">
                 <ModalButton
-                  Icon={<Settings className="text-yellow-500" />}
-                  Text="Settings"
+                  Icon={<Settings className="text-accent-default" />}
+                  Text="settings"
                   Route="/sett"
                 />
                 <ModalButton
-                  Icon={<Bell className="text-accent-default" />}
-                  Text="Notifications"
-                  Route="/notf"
-                />
-                <ModalButton
-                  Icon={<Project width={22} height={22} fill="#10B981" />}
-                  Text="Projects"
-                  Route="/proj"
-                />
-                <ModalButton
-                  Icon={<LogOut className="text-blue-500" />}
-                  Text="Log Out"
+                  Icon={<LogOut className="text-accent-default" />}
+                  Text="exit"
                   Route="/"
                   onClick={() => {
                     // logOut();

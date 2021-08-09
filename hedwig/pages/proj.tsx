@@ -1,7 +1,9 @@
 import React from "react";
-import Toolbar from "../util/Toolbar";
 import Project from "../public/projects";
+import Toolbar from "../components/Toolbar";
+import Navigator from "../components/Navigator";
 import ProjectUnit from "../components/ProjectUnit";
+import Twemoji from "../components/Twemoji";
 
 export default function Proj() {
   return (
@@ -14,8 +16,10 @@ export default function Proj() {
               className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
               style={{ top: "0px" }}>
               <div className="flex justify-left items-center mb-5 space-x-2">
-                <Project fill="#34d399" />
-                <h3>Your Projects</h3>
+                <Project />
+                <h3>
+                  projects <Twemoji emoji="🧠" />
+                </h3>
               </div>
             </div>
             {/* Feed starts */}
@@ -35,6 +39,7 @@ export default function Proj() {
             </div>
           </div>
         </article>
+        <Navigator />
       </div>
     </div>
   );

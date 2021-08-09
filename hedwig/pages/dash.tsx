@@ -1,7 +1,9 @@
 import React from "react";
-import Toolbar from "../util/Toolbar";
+import Toolbar from "../components/Toolbar";
 import ProjectUnit from "../components/ProjectUnit";
 import NotificationUnit from "../components/NotificationUnit";
+import Navigator from "../components/Navigator";
+import Twemoji from "../components/Twemoji";
 
 export default function Dash() {
   return (
@@ -14,7 +16,9 @@ export default function Dash() {
               className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
               style={{ top: "0px" }}>
               <div className="flex justify-between items-center mb-5">
-                <h3>Welcome Home 🙏🏡</h3>
+                <h3>
+                  dash <Twemoji emoji="🏡" />
+                </h3>
               </div>
             </div>
             {/* Feed starts */}
@@ -55,6 +59,7 @@ export default function Dash() {
             </div>
           </div>
         </article>
+        <Navigator />
       </div>
     </div>
   );

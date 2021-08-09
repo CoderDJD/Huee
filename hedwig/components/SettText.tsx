@@ -7,10 +7,11 @@ export default function SettText({
 }: InferProps<typeof SettText.propTypes>) {
   return (
     <div className="flex flex-col space-y-1">
-      <label className="text-xs text-white font-body font-bold">{text}</label>
       <textarea
         className="bg-dark-300 focus:outline-none focus:ring focus:ring-accent-default focus:ring-opacity-75 rounded-sm p-2 text-white"
-        placeholder={text}
+        placeholder={
+          text.slice(0, 1).toLowerCase() + text.slice(1, text.length)
+        }
         onChange={callback}></textarea>
     </div>
   );
