@@ -3,7 +3,6 @@ import Project from "../public/projects";
 import Toolbar from "../components/Toolbar";
 import Navigator from "../components/Navigator";
 import ProjectUnit from "../components/ProjectUnit";
-import Twemoji from "../components/Twemoji";
 
 export default function Proj() {
   return (
@@ -17,9 +16,7 @@ export default function Proj() {
               style={{ top: "0px" }}>
               <div className="flex justify-left items-center mb-5 space-x-2">
                 <Project />
-                <h3>
-                  projects <Twemoji emoji="🧠" />
-                </h3>
+                <h3>projects</h3>
               </div>
             </div>
             {/* Feed starts */}

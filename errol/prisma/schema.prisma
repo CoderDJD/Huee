@@ -28,6 +28,7 @@ model Project {
   github         String
   twitter        String
   youtube        String
+  discord        String
   bmc            String
   applicationUrl String
   name           String

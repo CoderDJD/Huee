@@ -1,14 +1,9 @@
 import React from "react";
 import "../styles/globals.css";
-import { Provider } from "next-auth/client";
 import PropTypes, { InferProps } from "prop-types";
 
 function MyApp({ Component, pageProps }: InferProps<typeof MyApp.propTypes>) {
-  return (
-    <Provider session={pageProps.session}>
-      <Component {...pageProps} />
-    </Provider>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
