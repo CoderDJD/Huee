@@ -1,12 +1,16 @@
+import React from "react";
+import Head from "next/head";
 import { Bell } from "react-feather";
 import Toolbar from "../components/Toolbar";
-import NotificationUnit from "../components/NotificationUnit";
 import Navigator from "../components/Navigator";
-import React from "react";
+import NotificationUnit from "../components/NotificationUnit";
 
 export default function Notifications() {
   return (
     <div className="bg-dark-400 w-screen h-screen flex flex-col">
+      <Head>
+        <title>hoot.notf()</title>
+      </Head>
       <Toolbar />
       <div className="flex flex-col items-center w-full scrollbar-thin scrollbar-thumb-accent-disabled scrollbar-thumb-rounded-lg mb-7">
         <article className="relative w-full px-3">

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Project from "../public/projects";
 import Toolbar from "../components/Toolbar";
 import Navigator from "../components/Navigator";
@@ -7,6 +8,9 @@ import ProjectUnit from "../components/ProjectUnit";
 export default function Proj() {
   return (
     <div className="bg-dark-400 w-screen h-screen flex flex-col">
+      <Head>
+        <title>hoot.proj(&quot;you&quot;)</title>
+      </Head>
       <Toolbar />
       <div className="flex flex-col items-center w-full scrollbar-thin scrollbar-thumb-accent-disabled scrollbar-thumb-rounded-lg mb-7">
         <article className="relative w-full px-3">

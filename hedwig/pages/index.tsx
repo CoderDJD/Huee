@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import Button from "../components/Button";
@@ -9,7 +8,7 @@ export default function Home() {
   return (
     <div className="bg-dark-400 w-screen h-screen scrollbar-thin scrollbar-thumb-accent-hover scrollbar-thumb-rounded-md">
       <Head>
-        <title>Hoot</title>
+        <title>Hoot | Beta out in 1M</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="bg-gradient-to-r from-accent-default via-blue-500 to-indigo-500 p-5">
@@ -25,9 +24,12 @@ export default function Home() {
             <a href="https://github.com/CoderDJD/Hoot" className="text-white">
               GitHub
             </a>
-            <Link href="/auth">
-              <span className="text-white cursor-pointer">Log In</span>
-            </Link>
+            <Button
+              clickHandler={() => {
+                console.log("Joshua is lazy.");
+              }}>
+              <span className="text-white">Log In</span>
+            </Button>
           </section>
         </div>
         <div className="p-6 mt-16 flex flex-col space-y-14">

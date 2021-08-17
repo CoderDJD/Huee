@@ -1,13 +1,17 @@
 import React from "react";
+import Head from "next/head";
 import Toolbar from "../components/Toolbar";
+import Twemoji from "../components/Twemoji";
+import Navigator from "../components/Navigator";
 import ProjectUnit from "../components/ProjectUnit";
 import NotificationUnit from "../components/NotificationUnit";
-import Navigator from "../components/Navigator";
-import Twemoji from "../components/Twemoji";
 
 export default function Dash() {
   return (
     <div className="bg-dark-400 w-screen h-screen flex flex-col">
+      <Head>
+        <title>hoot.dash()</title>
+      </Head>
       <Toolbar />
       <div className="flex flex-col items-center w-full scrollbar-thin scrollbar-thumb-accent-hover scrollbar-thumb-rounded-md mb-7">
         <article className="relative w-full px-3">

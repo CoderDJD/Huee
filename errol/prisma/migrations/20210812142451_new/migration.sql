@@ -1,6 +1,7 @@
 -- CreateTable
 CREATE TABLE "User" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
+    "createdAt" TEXT NOT NULL,
     "bio" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "uname" TEXT NOT NULL,
@@ -16,11 +17,12 @@ CREATE TABLE "User" (
 
 -- CreateTable
 CREATE TABLE "Project" (
-    "id" SERIAL NOT NULL,
-    "userId" INTEGER NOT NULL,
+    "id" TEXT NOT NULL,
+    "userId" TEXT NOT NULL,
     "github" TEXT NOT NULL,
     "twitter" TEXT NOT NULL,
     "youtube" TEXT NOT NULL,
+    "discord" TEXT NOT NULL,
     "bmc" TEXT NOT NULL,
     "applicationUrl" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -40,7 +42,7 @@ CREATE TABLE "Member" (
     "uname" TEXT NOT NULL,
     "bio" TEXT NOT NULL,
     "online" BOOLEAN NOT NULL,
-    "projectId" INTEGER
+    "projectId" TEXT
 );
 
 -- CreateIndex

@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import Head from "next/head";
 import React, { useState } from "react";
 import { Settings } from "react-feather";
-import Toolbar from "../components/Toolbar";
 import Button from "../components/Button";
+import Toolbar from "../components/Toolbar";
 import SettText from "../components/SettText";
 import Navigator from "../components/Navigator";
 import SettInput from "../components/SettInput";
@@ -19,6 +20,9 @@ export default function Sett() {
 
   return (
     <div className="bg-dark-400 w-screen h-screen flex flex-col">
+      <Head>
+        <title>hoot.sett(config)</title>
+      </Head>
       <Toolbar />
       <div className="flex flex-col items-center w-full scrollbar-thin scrollbar-thumb-accent-disabled scrollbar-thumb-rounded-lg mb-7">
         <article className="relative w-full px-3">

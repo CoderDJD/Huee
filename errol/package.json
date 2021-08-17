@@ -2,20 +2,28 @@
   "name": "errol",
   "author": "Joshua Daniel D",
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "prisma": "^2.26.0"
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/node": "^16.4.13",
+    "@types/node-fetch": "^2.5.12",
+    "@types/passport": "^1.0.7",
+    "@types/passport-github": "^1.1.6",
+    "@types/websocket": "^1.0.4",
+    "nodemon": "^2.0.12",
+    "prisma": "^2.29.1",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@prisma/client": "^2.26.0",
-    "apollo-server-express": "^3.0.2",
+    "@prisma/client": "^2.29.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "superagent": "^6.1.0",
-    "volleyball": "^1.5.1"
+    "node-fetch": "^2.6.1"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "tsc -w",
+    "start": "nodemon dist/index.js"
   }
 }
