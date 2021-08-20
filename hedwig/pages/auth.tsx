@@ -8,7 +8,7 @@ import Button from "../components/Button";
 
 export default function Auth() {
   const [mshow, setShow] = useState(false);
-  const [username, setUser] = useState("");
+  const [uname, setUser] = useState("");
   return (
     <div className="bg-dark-400 w-screen h-screen grid grid-cols-1 grid-rows-3 md:grid-cols-3 gap-4">
       <Head>
@@ -36,14 +36,9 @@ export default function Auth() {
               />
               <Button
                 clickHandler={async () => {
-                  console.log(username);
-                  fetch(
-                    `http://localhost:4000/auth/github?uname=${username.toString()}`,
-                  )
-                    .then(res => {
-                      return res.json();
-                    })
-                    .then(user => console.log(user.user));
+                  fetch("http://localhost:4000/auth/github?uname=" + uname)
+                    .then(res => res.json())
+                    .then(user => console.log(user));
                 }}>
                 submit
               </Button>

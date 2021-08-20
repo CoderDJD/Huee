@@ -1,54 +1,61 @@
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["mongoDb"]
 }
 
 model User {
-  id        String    @id @default(cuid())
+  id        String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  uname     String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
   bio       String?
   name      String?
-  uname     String    @unique
-  online    Boolean
   avatar    String
-  createdAt String
-  updatedAt String
   github    String
   twitter   String?
   youtube   String?
   projects  Project[]
+  sessionId String
+  notifications 
 }
 
 model Project {
-  id             String   @id @default(cuid())
-  user           User?    @relation(fields: [userId], references: [id])
-  userId         String
+  id             String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  admin           User?    @relation(fields: [userId], references: [id])
+  adminId         String   @db.ObjectId
   github         String?
   twitter        String?
   youtube        String?
-  discord        String?
-  bmc            String?
-  ptr            String?
   applicationUrl String?
   name           String
   description    String
-  ytWebhook      String?
-  bmcWebhook     String?
-  ptrWebhook     String?
-  twtrWebhook    String?
   people         Member[]
-  peopleNum      Int
   open           Boolean
+  notifications  Notifications[]
+  chats Chats[]
 }
 
 model Member {
-  name      String?
+  memberId  String @id @default(dbgenerated()) @map("_id") @db.ObjectId
   uname     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String?
   bio       String?
-  online    Boolean
   Project   Project? @relation(fields: [projectId], references: [id])
-  projectId String?
+  projectId String? @db.ObjectId
+}
+
+model Chat {
+  message String
+  messageId String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  sender Member
 }
