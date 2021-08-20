@@ -4,7 +4,7 @@ datasource db {
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["mongoDb"]
 }
 
@@ -21,15 +21,14 @@ model User {
   youtube   String?
   projects  Project[]
   sessionId String
-  notifications 
 }
 
 model Project {
   id             String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
-  admin           User?    @relation(fields: [userId], references: [id])
-  adminId         String   @db.ObjectId
+  admin          User?    @relation(fields: [adminId], references: [id])
+  adminId        String   @db.ObjectId
   github         String?
   twitter        String?
   youtube        String?
@@ -38,24 +37,28 @@ model Project {
   description    String
   people         Member[]
   open           Boolean
-  notifications  Notifications[]
-  chats Chats[]
+  // notifications  Notifications[]
+  chats          Chat[]
 }
 
 model Member {
-  memberId  String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  memberId  String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
   uname     String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   name      String?
   bio       String?
   Project   Project? @relation(fields: [projectId], references: [id])
-  projectId String? @db.ObjectId
+  projectId String?  @db.ObjectId
+  chat      Chat[]
 }
 
 model Chat {
-  message String
-  messageId String @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  createdAt DateTime @default(now())
-  sender Member
+  message        String
+  messageId      String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  createdAt      DateTime @default(now())
+  sender         Member   @relation(fields: [memberMemberId], references: [memberId])
+  Project        Project? @relation(fields: [projectId], references: [id])
+  projectId      String?  @db.ObjectId
+  memberMemberId String   @db.ObjectId
 }

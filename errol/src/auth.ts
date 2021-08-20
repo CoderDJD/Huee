@@ -25,7 +25,7 @@ router.get("/github", async (req, res) => {
         })
         .then(async u => {
           try {
-            const user = prisma.user.create({
+            const user = await prisma.user.create({
               data: {
                 uname: u.uname,
                 bio: u.bio,
@@ -34,7 +34,7 @@ router.get("/github", async (req, res) => {
                 github: u.github,
               },
             });
-            prisma.member.create({
+            await prisma.member.create({
               data: {
                 uname: u.uname,
                 name: u.name,
