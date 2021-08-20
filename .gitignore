@@ -12,3 +12,9 @@ yarn-error.log*
 .pnp.js
 .vercel
 build
+
+.yarn
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
