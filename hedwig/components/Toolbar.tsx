@@ -1,30 +1,23 @@
 import Avatar from "./Avatar";
+import Twemoji from "./Twemoji";
 import ModalButton from "./ModalButton";
 import React, { useState, useEffect } from "react";
 import { Fade, Modal, Backdrop } from "@material-ui/core";
 import { Search, Settings, GitHub, LogOut } from "react-feather";
-import Twemoji from "./Twemoji";
-import { useSession } from "../hooks/useSession";
 
 export default function Toolbar() {
   const [mshow, setShow] = useState(false);
-  const [load, setLoad] = useState(false);
-  let user;
-  if (setLoad) {
-    user = useSession();
-  }
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.user));
+  }, []);
   return (
     <div
       className="flex w-full p-3 h-8 justify-between items-center"
       style={{ marginTop: 10 }}>
       <button className="focus:outline-none">
-        <img
-          style={load ? { display: "none" } : { display: "none" }}
-          src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f496.png"
-          onLoad={() => setLoad(true)}
-        />
         <Avatar
-          imgUrl={user.avatar}
+          imgUrl={user?.avatar}
           notify={true}
           onClick={() => {
             setShow(true);
@@ -60,7 +53,8 @@ export default function Toolbar() {
                   Text="exit"
                   Route="/"
                   onClick={() => {
-                    // logOut();
+                    localStorage.removeItem("user");
+                    location.replace("/auth");
                   }}
                 />
               </div>

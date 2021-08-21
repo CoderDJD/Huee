@@ -10,17 +10,18 @@ generator client {
 
 model User {
   id        String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  email     String    @unique
+  password  String
   uname     String    @unique
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   bio       String?
   name      String?
-  avatar    String
-  github    String
+  avatar    String?
+  github    String?
   twitter   String?
   youtube   String?
   projects  Project[]
-  sessionId String
 }
 
 model Project {
@@ -37,7 +38,6 @@ model Project {
   description    String
   people         Member[]
   open           Boolean
-  // notifications  Notifications[]
   chats          Chat[]
 }
 

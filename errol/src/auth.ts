@@ -1,63 +1,40 @@
 import express from "express";
-import fetch from "node-fetch";
+import bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
-import { checkIfUser } from "./util/checkUser";
+import { checkIfSignedUp } from "./util/checkUser";
 
 const prisma = new PrismaClient();
 const router = express.Router();
 
-router.get("/github", async (req, res) => {
-  let signedUp;
-  const { uname } = req.query;
-  if (typeof uname == "string") {
-    signedUp = await checkIfUser(uname?.toString());
+router.post("/github", async (req, res) => {
+  const { uname, email, password } = req.body;
+  if (typeof uname == "string" && typeof email == "string") {
+    let signedUp = await checkIfSignedUp(uname?.toString());
     if (!signedUp) {
-      fetch(`https://api.github.com/users/${uname}`)
-        .then(res => res.json())
-        .then(user => {
-          return {
-            uname: uname,
-            bio: user.bio,
-            name: user.name,
-            avatar: user.avatar_url,
-            github: user.html_url,
-          };
-        })
-        .then(async u => {
-          try {
-            const user = await prisma.user.create({
-              data: {
-                uname: u.uname,
-                bio: u.bio,
-                avatar: u.avatar,
-                name: u.name,
-                github: u.github,
-              },
-            });
-            await prisma.member.create({
-              data: {
-                uname: u.uname,
-                name: u.name,
-                bio: u.bio,
-              },
-            });
-            res.json(user);
-          } catch (err) {
-            res.json({ err: err });
-          }
-        })
-        .catch(err => res.json({ err: err }));
-    } else {
-      const user = await prisma.user.findUnique({
-        where: {
+      let salt = bcrypt.genSaltSync(20);
+      const user = await prisma.user.create({
+        data: {
           uname: uname,
+          email: email,
+          password: bcrypt.hashSync(password, salt),
         },
       });
-      res.json(user);
+      await prisma.member.create({ data: { uname: uname } });
+      res.json({ data: user, err: null });
+    } else {
+      const user = await prisma.user.findUnique({ where: { email: email } });
+      if (user) {
+        if (bcrypt.compareSync(password, user.password))
+          res.json({ data: user, err: null });
+        else res.status(400).json({ data: null, err: "Wrong Password." });
+      } else {
+        res.status(500).json({
+          data: null,
+          err: "Internal server error, unable to find user.",
+        });
+      }
     }
-  } else {
-    res.status(400).json({ err: "Query type error." });
-  }
+  } else res.status(400).json({ data: null, err: "Query type error." });
 });
 
 export default router;

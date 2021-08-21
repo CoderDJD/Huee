@@ -1,7 +1,6 @@
 import React from "react";
 import { Circle } from "react-feather";
 import PropTypes, { InferProps } from "prop-types";
-import Link from "next/link";
 
 export default function NavigationUnit({
   routeStr,
@@ -9,7 +8,7 @@ export default function NavigationUnit({
 }: InferProps<typeof NavigationUnit.propTypes>) {
   return (
     <div className="flex cursor-pointer">
-      <Link href={routeStr}>{Icon}</Link>
+      <a href={routeStr}>{Icon}</a>
     </div>
   );
 }
