@@ -1,7 +1,7 @@
 import express from "express";
 import bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
-import { checkIfSignedUp } from "./util/checkUser";
+import { checkIfSignedUp } from "./util/checkSign";
 
 const prisma = new PrismaClient();
 const router = express.Router();
